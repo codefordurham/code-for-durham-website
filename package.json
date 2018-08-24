@@ -1,0 +1,24 @@
+{
+  "name": "code-for-durham",
+  "version": "1.0.0",
+  "description": "Code for Durham website",
+  "scripts": {
+    "gulpwatch": "gulp watch",
+    "gulpstyles": "gulp styles"
+  },
+  "author": "Code for Durham",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "8.4.1",
+    "browser-sync": "^2.24.6",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "7.0.1",
+    "postcss-import": "11.1.0",
+    "postcss-mixins": "6.2.0",
+    "postcss-nested": "3.0.0",
+    "postcss-simple-vars": "4.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.0"
+  }
+}

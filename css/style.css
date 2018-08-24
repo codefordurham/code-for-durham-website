@@ -1,0 +1,15 @@
+/*
+Theme Name: Code for Durham Theme
+Author: Code for Durham
+Version: 1.0
+*/
+
+@import "normalize.css";
+
+@import "base/variables";
+
+@import "base/baseline";
+
+@import "modules/header";
+@import "modules/footer";
+@import "modules/project";
