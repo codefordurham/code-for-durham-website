@@ -8,10 +8,10 @@
 </head>
 <body <?php body_class(); ?>>
 
-  <header class="site-header">
+  <header class="header">
     <a href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_theme_file_uri('/images/logo.png'); ?>" alt="Code for Durham logo"></a>
     <?php bloginfo('description'); ?>
-    <div>
+    <div class="container">
       <nav class="main-navigation">
         <ul>
           <li <?php if (is_page('about')) echo 'class="current-menu-item"'?>>

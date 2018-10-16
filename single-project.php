@@ -9,7 +9,6 @@
     <div class="main-container project">
       <h1><?php the_title(); ?></h1>
 
-      
       <?php 
         $projectStatus = get_field('project_status'); 
           

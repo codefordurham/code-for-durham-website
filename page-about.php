@@ -14,12 +14,12 @@
         <div><?php echo get_field('our_mission'); ?></div>
       </div>
 
-      <div class="page-section">
+      <div class="page-section" id="what-is-cfa">
         <h2>What is Code For America?</h2>
         <div><?php echo get_field('what_is_cfa'); ?></div>
       </div>
 
-      <div class="page-section">
+      <div class="page-section" id="what-is-civic-hacking">
         <h2>What is Civic Hacking?</h2>
         <div><?php echo get_field('what_is_civic_hacking'); ?></div>
       </div>
@@ -29,7 +29,7 @@
         <div><?php echo get_field('who_do_we_work_with'); ?></div>
       </div>
 
-      <div class="page-section">
+      <div class="page-section" id="how-can-i-help">
         <h2>How Can I Help?</h2>
         <div><?php echo get_field('how_can_i_help'); ?></div>
       </div>
