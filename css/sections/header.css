@@ -1,0 +1,53 @@
+.header {
+  padding: 0 10%;
+  height: 71px;
+  background-color: $mainBlue;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+
+  .logo {
+    margin-top: 13px;
+    width: 184px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .navigation {
+    display: flex;
+    align-items: stretch;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      li {
+        list-style-type: none;
+        margin-left: 40px;
+
+        p.slogan {
+          margin-right: 20px;
+          font-size: 14px;
+          font-weight: 300;
+          color: $textWhite;
+        }
+
+        a {
+          font-family: $headerFont;
+          font-size: 18px;
+          letter-spacing: 1.6px;
+          color: $textWhite;
+          text-decoration: none;
+          &:hover {
+            color: #dddddd;
+          }
+        }
+
+        &.current-menu-item a {
+          color: #eeeeee;
+        }
+      }
+    }
+  }
+}

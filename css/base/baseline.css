@@ -1,7 +1,9 @@
-body {
-  font-family: sans-serif;
+html {
+  box-sizing: border-box;
 }
 
-.main-container {
-  padding: 10px 40px 30px 40px;
+body {
+  font-family: $mainFont;
+  margin: 0;
+  padding: 0;
 }

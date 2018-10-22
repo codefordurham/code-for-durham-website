@@ -10,6 +10,5 @@ Version: 1.0
 
 @import "base/baseline";
 
-@import "modules/header";
-@import "modules/footer";
-@import "modules/project";
+@import "sections/header";
+@import "sections/footer";

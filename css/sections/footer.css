@@ -1,0 +1,16 @@
+.footer {
+  height: 108px;
+  padding: 0 10% 5px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $darkBlue;
+  font-family: $headerFont;
+  font-size: 16px;
+  font-weight: bold;
+  color: $textWhite;
+
+  .logo {
+    width: 126px;
+  }
+}
