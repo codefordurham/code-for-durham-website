@@ -347,58 +347,486 @@ template {
   display: none;
 }
 
-body {
-  font-family: sans-serif;
+html {
+  box-sizing: border-box;
 }
 
-.main-container {
-  padding: 10px 40px 30px 40px;
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-  background-color: #3999C9;
+  padding: 0 10%;
+  height: 71px;
+  background-color: #399aca;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.65);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  color: white;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .header .logo {
-    width: 150px;
+    margin-top: 13px;
+    width: 184px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24);
   }
 
-.header .main-navigation ul {
+.header .navigation {
+    display: flex;
+    align-items: stretch;
+  }
+
+.header .navigation ul {
       margin: 0;
       padding: 0;
-      list-style-type: none;
+      display: flex;
+      align-items: center;
     }
 
-.header .main-navigation ul li {
-        display: inline-block;
-        margin: 0 5px;
+.header .navigation ul li {
+        list-style-type: none;
+        margin-left: 40px;
       }
 
-.header .main-navigation ul li a {
-          color: white;
+.header .navigation ul li p.slogan {
+          margin-right: 20px;
+          font-size: 14px;
+          font-weight: 300;
+          color: #ffffff;
+        }
+
+.header .navigation ul li a {
+          font-family: Montserrat, sans-serif;
+          font-size: 18px;
+          letter-spacing: 1.6px;
+          color: #ffffff;
           text-decoration: none;
         }
 
-.header .main-navigation ul li.current-menu-item a {
-        color: #ddd;
-      }
+.header .navigation ul li a:hover {
+            color: #dddddd;
+          }
 
-.site-footer {
-  background-color: #21536C;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 10px;
-  color: white;
+.header .navigation ul li.current-menu-item a {
+          color: #eeeeee;
+        }
+
+.page-banner {
+  position: relative;
 }
 
-.site-footer .logo {
-    width: 150px;
+.page-banner .overlay {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.42);
+  }
+
+.page-banner .durham {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 701px;
+  }
+
+.page-banner .durham h1 {
+      margin-top: 0;
+      padding-top: 97px;
+      font-family: Montserrat, sans-serif;
+      font-size: 35px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.boxes .box {
+    width: 487px;
+    height: 361px;
+    margin-top: -250px;
+    border-radius: 10px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.13);
+  }
+
+.boxes .box .box-header {
+      height: 135px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+.boxes .box .box-header h2 {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 1.8px;
+        color: #ffffff;
+        text-align: center;
+      }
+
+.boxes .box .box-header.next_meetup {
+        background-color: rgba(48, 130, 171, 0.9);
+      }
+
+.boxes .box .box-header.get_started {
+        background-color: rgba(204, 46, 68, 0.9);
+      }
+
+.boxes .box .box-body {
+      height: 226px;
+      background-color: #ffffff;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+.boxes .box .box-body .cta {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+      }
+
+.boxes .box .box-body .cta a {
+          padding: 10px 20px;
+          font-family: Montserrat, sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          color: #ffffff;
+          text-decoration: none;
+        }
+
+.boxes .box .box-body.meetup .meetup_datetime {
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: #444444;
+          margin-bottom: 20px;
+        }
+
+.boxes .box .box-body.meetup .meetup_datetime img {
+            margin-right: 15px;
+          }
+
+.boxes .box .box-body.meetup .meetup_title {
+          opacity: 0.5;
+          font-size: 16px;
+          color: #444444;
+          margin-bottom: 10px;
+        }
+
+.boxes .box .box-body.meetup .meetup_location a {
+            font-size: 16px;
+            color: #399aca;
+            text-decoration: none;
+          }
+
+.boxes .box .box-body.meetup .cta {
+          display: flex;
+          align-items: center;
+        }
+
+.boxes .box .box-body.meetup .cta .meetup_rsvps {
+            opacity: 0.5;
+            font-size: 16px;
+            color: #444444;
+            margin-right: 20px;
+          }
+
+.boxes .box .box-body.meetup .cta a {
+            background-color: #399aca;
+          }
+
+.boxes .box .box-body.faq ul {
+          margin: 0;
+          padding: 0;
+        }
+
+.boxes .box .box-body.faq ul li {
+            list-style-type: none;
+            padding-bottom: 15px;
+          }
+
+.boxes .box .box-body.faq ul li a {
+              font-size: 18px;
+              font-weight: 500;
+              color: #444444;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+            }
+
+.boxes .box .box-body.faq ul li a img {
+                padding-right: 15px;
+                width: 20px;
+                height: 20px;
+              }
+
+.boxes .box .box-body.faq ul li a:hover {
+                color: #d14256;
+              }
+
+.boxes .box .box-body.faq .cta a {
+          background-color: #d14256;
+        }
+
+.projects h2 {
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 30px;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    color: #444444;
+  }
+
+.projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+.projects .project-list .project {
+      flex: 25%;
+      max-width: 400px;
+      min-width: 300px;
+      height: 300px;
+      background-color: #399aca;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      position: relative;
+    }
+
+.projects .project-list .project .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0,0,0,0.6);
+      }
+
+.projects .project-list .project .project-description {
+        position: relative;
+        z-index: 2;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        font-family: Montserrat, sans-serif;
+        text-decoration: none;
+        color: #ffffff;
+        box-sizing: border-box;
+      }
+
+.projects .project-list .project .project-description h3 {
+          font-size: 35px;
+          font-weight: normal;
+          text-align: center;
+          margin: 0;
+          margin-top: 80px;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+
+.projects .project-list .project .project-description .status {
+          color: #ffffff;
+          margin-bottom: 39px;
+          border-radius: 33px;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 1.6px;
+          padding: 10px 25px;
+          background-color: #444444;
+          border: none;
+          outline: none;
+        }
+
+.projects .project-list .project .project-description .status.maintaining {
+            background-color: #2cc285;
+          }
+
+.projects .project-list .project .project-description .status.planning {
+            background-color: #fe8e39;
+          }
+
+.projects .project-list .project .project-description .status.testing {
+            background-color: #7141cc;
+          }
+
+.projects .project-list .project .project-description .status.prototyping {
+            background-color: #399aca;
+          }
+
+.projects .project-list .project .project-description.submit {
+          justify-content: center;
+        }
+
+.projects .project-list .project .project-description.submit h3 {
+            margin-top: 0;
+            padding: 50px;
+          }
+
+.spotlight {
+  background-color: #ffffff;
+}
+
+.spotlight h2 {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    color: #444444;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+.spotlight .spotlight-project {
+    background-color: #f7f7f7;
+    display: flex;
+    padding: 50px 10%;
+  }
+
+.spotlight .spotlight-project .spotlight-image {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+.spotlight .spotlight-project .spotlight-image img {
+        float: right;
+        max-width: 100%;
+      }
+
+.spotlight .spotlight-project .spotlight-content {
+      flex: 1;
+      margin-left: 20px;
+      padding: 0;
+    }
+
+.spotlight .spotlight-project .spotlight-content .project-title {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        font-family: Montserrat, sans-serif;
+        font-size: 26px;
+        font-weight: normal;
+      }
+
+.spotlight .spotlight-project .spotlight-content .project-title a {
+          color: #399aca;
+          text-decoration: none;
+        }
+
+.spotlight .spotlight-project .spotlight-content .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #399aca;
+      }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 80px 50px 50px 50px;
+}
+
+.contact h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    color: #444444;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+.contact .follow {
+    width: 450px;
+  }
+
+.contact .follow ul {
+      border-right: 1px solid #979797;
+      margin: 0;
+      padding: 0;
+    }
+
+.contact .follow ul li {
+        list-style-type: none;
+        padding-bottom: 18px;
+        text-align: left;
+        padding-left: 85px;
+      }
+
+.contact .follow ul li img {
+          margin-right: 21px;
+        }
+
+.contact .follow ul li a {
+          font-family: Montserrat, sans-serif;
+          font-size: 25px;
+          color: #399aca;
+          text-decoration: none;
+        }
+
+.contact .follow ul li:last-of-type {
+          padding-bottom: 0;
+        }
+
+.contact .sponsors {
+    width: 450px;
+  }
+
+.contact .sponsors img {
+      width: 200px;
+      margin-left: 120px;
+      margin-top: 32px;
+    }
+
+.footer {
+  height: 108px;
+  padding: 0 10% 5px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21536c;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer .logo {
+    width: 126px;
   }
 
 .project .section.project-status h2, .project .section.project-status .project-status-text {

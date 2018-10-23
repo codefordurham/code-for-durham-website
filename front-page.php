@@ -162,20 +162,6 @@
        
     }
   ?>
-
-  <section class="contact">
-    <div class="follow">
-      <h2>JOIN IN</h2>
-      <ul>
-        <li><img src="<?php echo get_theme_file_uri('/images/twitter.svg'); ?>" alt="twitter logo"><a href="https://twitter.com/codefordurham">@CodeForDurham</a></li>
-        <li><img src="<?php echo get_theme_file_uri('/images/facebook.svg'); ?>" alt="facebook logo"><a href="https://www.facebook.com/codefordurham/">/codefordurham</a></li>
-        <li><img src="<?php echo get_theme_file_uri('/images/slack.svg'); ?>" alt="slack logo"><a href="https://open-nc.slack.com/">open-nc.slack.com</a></li>
-      </ul>
-    </div>
-    <div class="sponsors">
-      <h2>Sponsors</h2>
-    </div>	
-  </section>
 </div>
 
 <?php get_footer(); ?>

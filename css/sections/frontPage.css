@@ -322,21 +322,3 @@
     }
   }
 }
-
-.contact {
-  li {
-    list-style-type: none;
-    a {
-      font-family: Montserrat;
-      font-size: 25px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #399aca;
-      text-decoration: none;
-    }
-  }
-}

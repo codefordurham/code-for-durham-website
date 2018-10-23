@@ -1,3 +1,59 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 80px 50px 50px 50px;
+
+  h2 {
+    font-family: $headerFont;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    color: $textDark;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .follow {
+    width: 450px;
+
+    ul {
+      border-right: 1px solid #979797;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style-type: none;
+        padding-bottom: 18px;
+        text-align: left;
+        padding-left: 85px;
+        img {
+          margin-right: 21px;
+        }
+        a {
+          font-family: $headerFont;
+          font-size: 25px;
+          color: $mainBlue;
+          text-decoration: none;
+        }
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .sponsors {
+    width: 450px;
+
+    img {
+      width: 200px;
+      margin-left: 120px;
+      margin-top: 32px;
+    }
+  }
+}
+
 .footer {
   height: 108px;
   padding: 0 10% 5px 10%;
