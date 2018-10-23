@@ -11,4 +11,6 @@ Version: 1.0
 @import "base/baseline";
 
 @import "sections/header";
+@import "sections/frontPage";
 @import "sections/footer";
+@import "sections/project";

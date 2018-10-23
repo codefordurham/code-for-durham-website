@@ -1,32 +1,87 @@
 <?php get_header(); ?>
 
-<div class="main-container">
+<div>
 
-  <div class="page-banner durham">
-
+  <div class="page-banner">
+    <div class="durham" style="background-image: url(<?php the_post_thumbnail_url('homepage-banner'); ?>);">
+        <div class="speakers">
+          <h1></h1>
+        </div>
+      </div>
+    <div class="overlay"></div>
   </div>
 
-  <section class="info">
+  <section class="boxes">
     <div class="box">
-      <div class="meetup">
-        <h2>Next Meetup</h2>
+      <div class="box-header next_meetup">
+        <h2>NEXT MEETUP</h2>
       </div>
+      <div class="box-body meetup">
+        <div class="meetup_info">
+          <?php 
+            $next_meetup = get_next_meetup(); 
+            $start_datetime = date("l, M j, g:i", ($next_meetup->time + $next_meetup->utc_offset)/1000);
+            $end_time = date("g:ia", ($next_meetup->time + $next_meetup->utc_offset + $next_meetup->duration)/1000);
+            $full_address = $next_meetup->venue->address_1 . ', ' . $next_meetup->venue->city . ', ' . $next_meetup->venue->state;
+          ?>
 
-      <div class="getstarted">
-        <h2>Get Started</h2>
-        <ul>
-          <li><a href="<?php echo site_url('/about#what-is-cfa'); ?>"><img src="question-icon.svg" alt="">What is Code for America?</a></li>
-          <li><a href="<?php echo site_url('/about#what-is-civic-hacking'); ?>"><img src="question-icon.svg" alt="">What is Civic Hacking?</a></li>
-          <li><a href="<?php echo site_url('/about#how-can-i-help'); ?>"><img src="question-icon.svg" alt="">How can I help?</a></li>
-        </ul>
+          <div class="meetup_datetime">
+            <img src="<?php echo get_theme_file_uri('images/calendar.svg'); ?>" alt="">
+            <?php echo $start_datetime . ' - ' . $end_time ?>
+          </div>
+
+          <div class="meetup_title"><?php echo $next_meetup->name ?></div>
+          
+          <div class="meetup_location"><a href="https://www.google.com/maps/search/?api=1&query=<?php echo $full_address; ?>">
+            @ <?php echo $next_meetup->venue->name ?>
+          </a></div>
+
+        </div>
+
+        <div class="cta">
+          <div class="meetup_rsvps">( <?php echo $next_meetup->yes_rsvp_count; ?> so far )</div>
+
+          <a href="<?php echo $next_meetup->link; ?>">JOIN</a>
+        </div>
+
       </div>
-	  </div>
-	</section>
+    </div>
+    <div class="box">
+      <div class="box-header get_started">
+        <h2>GET STARTED</h2>
+      </div>
+      <div class="box-body faq">
+        <ul>
+          <li>
+            <a href="<?php echo site_url('/about#what-is-cfa'); ?>">
+              <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
+              What is Code for America?
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo site_url('/about#what-is-civic-hacking'); ?>">
+              <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
+              What is civic hacking?
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo site_url('/about#how-can-i-help'); ?>">
+              <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
+              How can I help?
+            </a>
+          </li>
+        </ul>
+        <div class="cta">
+          <a href="<?php echo site_url('/about'); ?>">LEARN MORE</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="projects">
-    <h2>What we are doing</h2>
+    <h2>WHAT WE ARE DOING</h2>
 
-    <div class="projectlist">
+    <div class="project-list">
 
       <?php
 
@@ -39,28 +94,26 @@
           while ($projects->have_posts()) {
             $projects->the_post(); ?>
 
-          <div class="project">
-            <a href="<?php the_permalink(); ?>">
+            <div class="project" style="background-image: url(<?php the_post_thumbnail_url('project-thumbnail'); ?>);">
+              <div class="overlay"></div>
+              
+              <a class="project-description" href="<?php the_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
 
-            <h3 class="headline headline--medium headline--post-title">
-              <?php the_title(); ?>
-            </h3>
-
-            <button class="status <?php echo strtolower(get_field('project_status')); ?>">
-              <?php the_field('project_status');?>
-            </button>
-
-            </a>
-          </div>
+                <button class="status <?php echo strtolower(get_field('project_status')); ?>">
+                  <?php echo strtoupper(get_field('project_status'));?>
+                </button>
+              </a>
+            </div>
 
         <?php } 
 
         }
       ?>
 
-      <div class="project submit">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeegSPgMenQpJj07v_zIvI1-F2gn1P1Y8TAeCOv4cS9zabRkw/viewform">
-          <h3>Submit Your Own Idea</h3>
+      <div class="project">
+        <a class="project-description submit" href="https://docs.google.com/forms/d/e/1FAIpQLSeegSPgMenQpJj07v_zIvI1-F2gn1P1Y8TAeCOv4cS9zabRkw/viewform">
+          <h3>Submit your own idea</h3>
         </a>
       </div>
 
@@ -68,14 +121,51 @@
 
   </section>
 
-  <section>
-    <h2>Project Spotlight</h2>
-    <div></div>
-  </section>
+  <?php 
+    $project_spotlight = new WP_Query(array(
+      'pagename' => 'project-spotlight'
+    ));
+    if ( $project_spotlight->have_posts() ) {
+
+      while ( $project_spotlight->have_posts() ) {
+    
+        $project_spotlight->the_post(); ?>
+
+        <section class="spotlight">
+
+          <h2>Project Spotlight</h2>
+
+          <div class="spotlight-project">
+
+            <div class="spotlight-image">
+              <img src="<?php the_post_thumbnail_url('project-spotlight'); ?>" alt="">
+            </div>
+
+            <div class="spotlight-content">
+              <h3 class="project-title">
+                <?php $url = get_permalink(get_field('project_title')->ID); ?>
+                <a href="<?php echo $url ?>">
+                  <?php echo get_field('project_title')->post_title ; ?>
+                </a>
+              </h3>
+
+              <div class="content"><?php echo shorten_text(get_field('description'), 330); ?></div>
+              
+              <a class="read-more" href="<?php the_field('link')?>">READ MORE</a>
+            </div>
+
+          </div>
+
+        </section>
+            
+      <?php } 
+       
+    }
+  ?>
 
   <section class="contact">
     <div class="follow">
-      <h2>Join In</h2>
+      <h2>JOIN IN</h2>
       <ul>
         <li><img src="<?php echo get_theme_file_uri('/images/twitter.svg'); ?>" alt="twitter logo"><a href="https://twitter.com/codefordurham">@CodeForDurham</a></li>
         <li><img src="<?php echo get_theme_file_uri('/images/facebook.svg'); ?>" alt="facebook logo"><a href="https://www.facebook.com/codefordurham/">/codefordurham</a></li>
