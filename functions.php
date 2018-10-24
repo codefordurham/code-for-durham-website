@@ -11,7 +11,7 @@
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_image_size('homepage-banner', 2000, 705, true);
-    add_image_size('project-banner', 1280, 495, true);
+    add_image_size('project-banner', 1024, 396, true);
     add_image_size('project-thumbnail', 400, 300, true);
     add_image_size('project-spotlight', 492, 277, true);
   }

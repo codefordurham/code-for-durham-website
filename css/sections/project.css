@@ -1,0 +1,198 @@
+.project-page {
+  h2 {
+    font-family: $headerFont;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1.8px;
+    text-align: center;
+    color: $textDark;
+    text-transform: uppercase;
+  }
+
+  .project-content {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $textDark;
+  }
+
+  .project-header {
+    width: 1024px;
+    height: 396px;
+    margin: 60px auto 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $textWhite;
+    font-family: $headerFont;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 45px;
+      position: relative;
+      z-index: 5;
+    }
+    .project-status {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      padding: 8px 25px;
+      border-radius: 33px;
+      position: relative;
+      z-index: 5;
+      margin-bottom: 35px;
+    }
+  }
+
+  .project-github {
+    width: 1024px;
+    margin: auto;
+    text-align: center;
+    margin-top: -60px;
+    position: relative;
+    z-index: 5;
+    .project-github-logo {
+      width: 72px;
+      height: 71px;
+      margin: auto;
+      overflow: hidden;
+      padding: 24px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      img {
+        max-width: 100%;
+      }
+    }
+    a {
+      font-size: 24px;
+      font-weight: bold;
+      color: $mainBlue;
+      text-decoration: none;
+      margin-top: -4px;
+    }
+  }
+
+  .project-objective {
+    width: 768px;
+    margin: 50px auto 0 auto;
+    h2 {
+      margin-bottom: 13px;
+    }
+  }
+
+  .project-details {
+    width: 768px;
+    margin: 50px auto 0 auto;
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
+
+  .project-links {
+    width: 768px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    h2 {
+      margin-bottom: 30px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: $mainBlue;
+        font-family: $headerFont;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .project-skills {
+    width: 896px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      color: $textDark;
+      padding: 0;
+      margin: 0;
+    }
+    ul {
+      margin: 0;
+      margin-top: 40px;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      li {
+        color: $textWhite;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: rgba(204, 46, 68, 0.9);
+        padding: 10px 30px;
+        margin: 0 5px 10px 5px;
+        border-radius: 25px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .project-contact {
+    width: 1024px;
+    margin: 60px auto 0 auto;
+    padding: 15px;
+    background-color: $greyLight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .project-image-container {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      margin-right: 16px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .contact-name {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $textDark;
+    }
+    .contact-title {
+      opacity: 0.5;
+      font-family: $headerFont;
+      font-size: 14px;
+      letter-spacing: 1.3px;
+      color: $textDark;
+      text-transform: uppercase;
+    }
+    .contact-button {
+      margin-left: 52px;
+      button {
+        padding: 10px 20px;
+        background-color: $mainBlue;
+        font-family: $headerFont;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: $textWhite;
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+}

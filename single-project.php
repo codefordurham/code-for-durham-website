@@ -6,94 +6,103 @@
 
     the_post(); ?>
     
-    <div class="main-container project">
-      <h1><?php the_title(); ?></h1>
+    <main class="project-page">
 
-      <?php 
-        $projectStatus = get_field('project_status'); 
-          
-        if ($projectStatus) { ?>
+      <section class="project-header" style="background-image:url(<?php the_post_thumbnail_url('project-banner'); ?>);">
+        <div class="overlay"></div>
 
-          <div class="section project-status">
+        <h1><?php the_title(); ?></h1>
+        <div class="project-status <?php echo strtolower(get_field('project_status')); ?>">
+          <?php echo get_field('project_status'); ?>
+        </div>
+      </section>
 
-            <h2>Project Status: </h2>
-
-            <div class="project-status-text"><?php echo $projectStatus; ?></div>
-            
-          </div>
-
-          <?php }
-      ?>
-
-      <?php 
-        $projectStatus = get_field('project_status'); 
-          
-        if ($projectStatus) { ?>
-
-          <div class="section github-link">
-        
-          </div>
-
+      <?php $github = get_field('github_link');
+        if ($github) { ?>
+          <section class="project-github">
+            <div class="project-github-logo"><img src="<?php echo get_theme_file_uri('images/github_icon/github-icon@3x.png'); ?>" alt="Github logo"></div>
+            <div><a href="<?php echo $github; ?>"><?php echo str_replace('https://','',$github); ?></a></div>
+          </section>
         <?php }
       ?>
 
-      <?php 
-        $projectDescription = get_field('project_description'); 
-        
-        if ($projectDescription) { ?>
-          <div class="section project-details">
+      <?php $objective = get_field('objective');
+        if ($objective) { ?>
+          <section class="project-objective">
+            <h2>Objective</h2>
+            <div class="project-content"><?php the_field('objective'); ?></div>
+          </section>
+        <?php }
+      ?>
 
+      <?php $projectDetails = get_field('project_details');
+        if ($projectDetails) { ?>
+          <section class="project-details">
             <h2>Project Details</h2>
+            <div class="project-content"><?php the_field('project_details'); ?></div>
+          </section>
+        <?php }
+      ?>
 
-            <?php 
-              $projectImage = get_the_post_thumbnail();
+      <?php $links = get_field('related_links');
+        if ($links) { ?>
+          <section class="project-links">
+            <h2>Related Links</h2>
+            <ul>
+              <?php $linksArray = explode("\n", $links);
+                foreach ($linksArray as $link) { ?>
+                  <li><a href="<?php echo $link; ?>"><?php echo $link; ?></a></li>
+                <?php }
+              ?>
+            </ul>
+          </section>
+        <?php }
+      ?>
 
-              if ($projectImage) { ?>
-                
-                <div class="project-image-container"><?php echo $projectImage; ?></div>
-              <?php }
-            ?>
-
-            <div><?php echo $projectDescription; ?></div>
-
-          </div>
-
+      <?php $skills = get_field('skills_needed');
+        if ($skills) { ?>
+          <section class="project-skills">
+            <h2>Your help is needed</h2>
+            <p>Are you willing and able to help with any of the following?</p> 
+            <p>Come to a meetup or contact the project leader to get started!</p>
+            <ul>
+              <?php $skillsArray = explode("\n", $skills);
+                foreach ($skillsArray as $skill) { ?>
+                  <li><?php echo $skill; ?></li>
+                <?php }
+              ?>
+            </ul>
+          </section>
         <?php }
       ?>
   
-      <?php 
-        $skillsNeeded = get_field('skills_needed'); 
-        
-        if ($skillsNeeded) { ?>
-
-          <div class="section skills-needed">
-
-            <h2>Skills Needed</h2>
-
-            <div><?php echo $skillsNeeded; ?></div>
-
-          </div>
-          
+      <?php $contact = get_field('project_leader');
+        if ($contact) { ?>
+          <section class="project-contact">
+            <div class="project-image-container">
+              <?php $profilePic = get_field('project_leader_picture');
+                if ($profilePic) {
+                  $src = $profilePic;
+                } else {
+                  $src = get_theme_file_uri('images/user/user.png');
+                }
+              ?>
+              <img src="<?php echo $src; ?>" alt="">
+            </div>
+            <div>
+              <div class="contact-name"><?php echo $contact; ?></div>
+              <div class="contact-title">Project Leader</div>
+            </div>
+            <?php $email = get_field('project_leader_email');
+              if ($email) {
+                echo '<div class="contact-button"><button>Contact</button></div>';
+              }
+            ?>
+          </section>
         <?php }
       ?>
 
-      <?php 
-        $contactInfo = get_field('project_leader_contact_information'); 
-        
-        if ($contactInfo) { ?>
-
-          <div class="section project-leader">
-            
-            <h2>Project Leader: <span class="project-leader-name"><?php echo get_field('project_leader'); ?></span></h2>
-
-            <div><?php echo $contactInfo; ?></div>
-
-          </div>
-
-        <?php }
-      ?>
-
-    </div>
+    </main>
 
   <?php }
 

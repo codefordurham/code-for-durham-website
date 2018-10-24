@@ -6,4 +6,27 @@ body {
   font-family: $mainFont;
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.maintaining {
+  background-color: #2cc285;
+}
+.planning {
+  background-color: #fe8e39;
+}
+.testing {
+  background-color: #7141cc;
+}
+.prototyping {
+  background-color: #399aca;
 }

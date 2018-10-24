@@ -1,15 +1,6 @@
 .page-banner {
   position: relative;
 
-  .overlay {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.42);
-  }
-
   .durham {
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -192,15 +183,6 @@
       background-size: cover;
       position: relative;
 
-      .overlay {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        background-color: rgba(0,0,0,0.6);
-      }
-
       .project-description {
         position: relative;
         z-index: 2;
@@ -230,21 +212,8 @@
           font-weight: bold;
           letter-spacing: 1.6px;
           padding: 10px 25px;
-          background-color: $textDark;
           border: none;
           outline: none;
-          &.maintaining {
-            background-color: #2cc285;
-          }
-          &.planning {
-            background-color: #fe8e39;
-          }
-          &.testing {
-            background-color: #7141cc;
-          }
-          &.prototyping {
-            background-color: #399aca;
-          }
         }
 
         &.submit {
@@ -276,7 +245,7 @@
   }
 
   .spotlight-project {
-    background-color: #f7f7f7;
+    background-color: $greyLight;
     display: flex;
     padding: 50px 10%;
 
