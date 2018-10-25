@@ -1,0 +1,51 @@
+.about {
+  width: 768px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.88;
+  color: $textDark;
+  
+  p > iframe, p > img {
+    display: block;
+    margin: auto;
+  }
+
+  h2 {
+    @mixin section-headers;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1.8;
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  .about-cfd {
+  }
+
+  .who-work-with {
+    .government-types {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      text-align: center;
+      margin-top: 60px;
+      .government-type {
+        &.county {
+          margin-left: 20px;
+        }
+        div {
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.67;
+        }
+        img {
+          height: 220px;
+        }
+      }
+    }
+  }
+
+  .civic-hacking {
+  }
+
+}

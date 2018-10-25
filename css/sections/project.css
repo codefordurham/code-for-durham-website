@@ -1,12 +1,9 @@
 .project-page {
   h2 {
-    font-family: $headerFont;
+    @mixin section-headers;
     font-size: 20px;
     font-weight: normal;
     letter-spacing: 1.8px;
-    text-align: center;
-    color: $textDark;
-    text-transform: uppercase;
   }
 
   .project-content {

@@ -347,6 +347,12 @@ template {
   display: none;
 }
 
+/* colors */
+
+/* status colors */
+
+/* fonts */
+
 html {
   box-sizing: border-box;
 }
@@ -433,11 +439,11 @@ body {
         }
 
 .header .navigation ul li a:hover {
-            color: #dddddd;
+            color: #eeeeee;
           }
 
 .header .navigation ul li.current-menu-item a {
-          color: #eeeeee;
+          color: #dddddd;
         }
 
 .page-banner {
@@ -486,11 +492,16 @@ body {
 
 .boxes .box .box-header h2 {
         font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1.6px;
+        color: #444444;
+        text-align: center;
+        text-transform: uppercase;
         font-size: 20px;
         font-weight: normal;
         letter-spacing: 1.8px;
         color: #ffffff;
-        text-align: center;
       }
 
 .boxes .box .box-header.next_meetup {
@@ -602,14 +613,15 @@ body {
         }
 
 .projects h2 {
-    text-align: center;
-    margin-top: 80px;
-    padding-bottom: 30px;
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1.6px;
     color: #444444;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 80px;
+    padding-bottom: 30px;
   }
 
 .projects .project-list {
@@ -682,16 +694,16 @@ body {
 }
 
 .spotlight h2 {
-    text-align: center;
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1.6px;
     color: #444444;
+    text-align: center;
+    text-transform: uppercase;
     margin-top: 80px;
     margin-bottom: 30px;
     padding: 0;
-    text-transform: uppercase;
   }
 
 .spotlight .spotlight-project {
@@ -755,10 +767,11 @@ body {
     font-weight: bold;
     letter-spacing: 1.6px;
     color: #444444;
+    text-align: center;
+    text-transform: uppercase;
     padding: 0;
     margin: 0;
     margin-bottom: 30px;
-    text-align: center;
   }
 
 .contact .follow {
@@ -822,12 +835,15 @@ body {
 
 .project-page h2 {
     font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    color: #444444;
+    text-align: center;
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: normal;
     letter-spacing: 1.8px;
-    text-align: center;
-    color: #444444;
-    text-transform: uppercase;
   }
 
 .project-page .project-content {
@@ -1036,3 +1052,60 @@ body {
         border: none;
         border-radius: 0;
       }
+
+.about {
+  width: 768px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.88;
+  color: #444444;
+
+}
+
+.about p > iframe, .about p > img {
+    display: block;
+    margin: auto;
+  }
+
+.about h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    color: #444444;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1.8;
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+.about .about-cfd {
+  }
+
+.about .who-work-with .government-types {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+.about .who-work-with .government-types .government-type.county {
+          margin-left: 20px;
+        }
+
+.about .who-work-with .government-types .government-type div {
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.67;
+        }
+
+.about .who-work-with .government-types .government-type img {
+          height: 220px;
+        }
+
+.about .civic-hacking {
+  }

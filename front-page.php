@@ -53,26 +53,26 @@
       <div class="box-body faq">
         <ul>
           <li>
-            <a href="<?php echo site_url('/about#what-is-cfa'); ?>">
+            <a href="<?php echo site_url('/about#what-is-cfd'); ?>">
               <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
               What is Code for America?
             </a>
           </li>
           <li>
-            <a href="<?php echo site_url('/about#what-is-civic-hacking'); ?>">
+            <a href="<?php echo site_url('/about#civic-hacking'); ?>">
               <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
-              What is civic hacking?
+              What is Civic Hacking?
             </a>
           </li>
           <li>
-            <a href="<?php echo site_url('/about#how-can-i-help'); ?>">
+            <a href="<?php echo site_url('/getting-started'); ?>">
               <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
               How can I help?
             </a>
           </li>
         </ul>
         <div class="cta">
-          <a href="<?php echo site_url('/about'); ?>">LEARN MORE</a>
+          <a href="<?php echo site_url('/getting-started'); ?>">LEARN MORE</a>
         </div>
       </div>
     </div>
