@@ -40,12 +40,12 @@
           color: $textWhite;
           text-decoration: none;
           &:hover {
-            color: #dddddd;
+            color: #eeeeee;
           }
         }
 
         &.current-menu-item a {
-          color: #eeeeee;
+          color: #dddddd;
         }
       }
     }
