@@ -19,14 +19,14 @@ body {
 }
 
 .maintaining {
-  background-color: #2cc285;
+  background-color: $maintaining;
 }
 .planning {
-  background-color: #fe8e39;
+  background-color: $planning;
 }
 .testing {
-  background-color: #7141cc;
+  background-color: $testing;
 }
 .prototyping {
-  background-color: #399aca;
+  background-color: $prototyping;
 }

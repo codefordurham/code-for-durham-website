@@ -1,3 +1,4 @@
+/* colors */
 $mainBlue: #399aca;
 $darkBlue: #21536c;
 $meetupBlue: #3082ab;
@@ -8,6 +9,13 @@ $greyLight: #f7f7f7;
 $textWhite: #ffffff;
 $textDark: #444444;
 
+/* status colors */
+$maintaining: #2cc285;
+$planning: #fe8e39;
+$testing: #7141cc;
+$prototyping: $mainBlue;
+
+/* fonts */
 $headerFont: Montserrat, sans-serif;
 $mainFont: Roboto, sans-serif;
 
