@@ -45,7 +45,7 @@
       ?>
 
       <?php $links = get_field('related_links');
-        if ($links) { ?>
+        if ($links && sizeof($links) > 0) { ?>
           <section class="project-links">
             <h2>Related Links</h2>
             <ul>
@@ -59,7 +59,7 @@
       ?>
 
       <?php $skills = get_field('skills_needed');
-        if ($skills) { ?>
+        if ($skills && sizeof($skills) > 0) { ?>
           <section class="project-skills">
             <h2>Your help is needed</h2>
             <p>Are you willing and able to help with any of the following?</p> 
