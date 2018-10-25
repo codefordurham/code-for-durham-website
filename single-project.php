@@ -49,10 +49,9 @@
           <section class="project-links">
             <h2>Related Links</h2>
             <ul>
-              <?php $linksArray = explode("\n", $links);
-                foreach ($linksArray as $link) { ?>
-                  <li><a href="<?php echo $link; ?>"><?php echo $link; ?></a></li>
-                <?php }
+              <?php foreach ($links as $link) { ?>
+                <li><a href="<?php echo $link["related_link"]; ?>"><?php echo $link["related_link"]; ?></a></li>
+              <?php }
               ?>
             </ul>
           </section>
@@ -66,10 +65,9 @@
             <p>Are you willing and able to help with any of the following?</p> 
             <p>Come to a meetup or contact the project leader to get started!</p>
             <ul>
-              <?php $skillsArray = explode("\n", $skills);
-                foreach ($skillsArray as $skill) { ?>
-                  <li><?php echo $skill; ?></li>
-                <?php }
+              <?php foreach ($skills as $skill) { ?>
+                <li><?php echo $skill["skills"]; ?></li>
+              <?php }
               ?>
             </ul>
           </section>
