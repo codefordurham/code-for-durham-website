@@ -65,7 +65,7 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo site_url('/getting-started'); ?>">
+            <a href="<?php echo site_url('/getting-started#how-to-help'); ?>">
               <img src="<?php echo get_theme_file_uri('images/question-icon.svg'); ?>" alt="">
               How can I help?
             </a>
@@ -78,7 +78,7 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2>WHAT WE ARE DOING</h2>
 
     <div class="project-list">

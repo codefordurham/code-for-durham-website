@@ -30,3 +30,17 @@ $mainFont: Roboto, sans-serif;
   text-transform: uppercase;
 }
 
+@define-mixin link-button {
+  font-family: $headerFont;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: $textWhite;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: $mainBlue;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}

@@ -66,13 +66,7 @@
         bottom: 30px;
         right: 30px;
         a {
-          padding: 10px 20px;
-          font-family: $headerFont;
-          font-size: 16px;
-          font-weight: bold;
-          letter-spacing: 1.5px;
-          color: $textWhite;
-          text-decoration: none;
+          @mixin link-button;
         }
       }
 
@@ -112,9 +106,6 @@
             font-size: 16px;
             color: $textDark;
             margin-right: 20px;
-          }
-          a {
-            background-color: $mainBlue;
           }
         }
       }
@@ -265,16 +256,9 @@
       }
 
       .read-more {
+        @mixin link-button;
         display: inline-block;
         margin-top: 10px;
-        font-family: $headerFont;
-        font-size: 16px;
-        font-weight: bold;
-        letter-spacing: 1.5px;
-        color: $textWhite;
-        text-decoration: none;
-        padding: 10px 20px;
-        background-color: $mainBlue;
       }
     }
   }

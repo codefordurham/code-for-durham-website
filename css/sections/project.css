@@ -180,15 +180,7 @@
     .contact-button {
       margin-left: 52px;
       button {
-        padding: 10px 20px;
-        background-color: $mainBlue;
-        font-family: $headerFont;
-        font-size: 16px;
-        font-weight: bold;
-        letter-spacing: 1.5px;
-        color: $textWhite;
-        border: none;
-        border-radius: 0;
+        @mixin link-button;
       }
     }
   }

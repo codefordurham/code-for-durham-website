@@ -528,13 +528,18 @@ body {
       }
 
 .boxes .box .box-body .cta a {
-          padding: 10px 20px;
           font-family: Montserrat, sans-serif;
           font-size: 16px;
           font-weight: bold;
           letter-spacing: 1.5px;
           color: #ffffff;
           text-decoration: none;
+          text-transform: uppercase;
+          padding: 10px 20px;
+          background-color: #399aca;
+          border: none;
+          border-radius: 0;
+          cursor: pointer;
         }
 
 .boxes .box .box-body.meetup .meetup_datetime {
@@ -573,10 +578,6 @@ body {
             font-size: 16px;
             color: #444444;
             margin-right: 20px;
-          }
-
-.boxes .box .box-body.meetup .cta a {
-            background-color: #399aca;
           }
 
 .boxes .box .box-body.faq ul {
@@ -743,16 +744,20 @@ body {
         }
 
 .spotlight .spotlight-project .spotlight-content .read-more {
-        display: inline-block;
-        margin-top: 10px;
         font-family: Montserrat, sans-serif;
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 1.5px;
         color: #ffffff;
         text-decoration: none;
+        text-transform: uppercase;
         padding: 10px 20px;
         background-color: #399aca;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 10px;
       }
 
 .contact {
@@ -1042,15 +1047,18 @@ body {
     }
 
 .project-page .project-contact .contact-button button {
-        padding: 10px 20px;
-        background-color: #399aca;
         font-family: Montserrat, sans-serif;
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 1.5px;
         color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        background-color: #399aca;
         border: none;
         border-radius: 0;
+        cursor: pointer;
       }
 
 .about {
@@ -1109,3 +1117,201 @@ body {
 
 .about .civic-hacking {
   }
+
+.getting-started .gs-header {
+    position: relative;
+    height: 396px;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.getting-started .gs-header h1 {
+      margin: 0;
+      padding: 0;
+      font-family: Montserrat, sans-serif;
+      font-size: 35px;
+      font-weight: normal;
+      color: #ffffff;
+      z-index: 3;
+    }
+
+.getting-started .steps {
+    width: 768px;
+    margin: 80px auto 100px auto;
+  }
+
+.getting-started .steps h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      color: #444444;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: normal;
+      letter-spacing: 1.8px;
+      padding: 0;
+      margin: 0 0 50px 0;
+    }
+
+.getting-started .steps ul {
+      margin: 0;
+      padding: 0;
+    }
+
+.getting-started .steps ul .step {
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 58px;
+      }
+
+.getting-started .steps ul .step .number {
+          display: block;
+          height: 94px;
+          width: 94px;
+          flex-shrink: 0;
+          border-radius: 100%;
+          background-color: #d14256;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: Montserrat, sans-serif;
+          font-size: 40px;
+          font-weight: 900;
+          letter-spacing: 3.6px;
+          color: #ffffff;
+          margin-right: 30px;
+        }
+
+.getting-started .steps ul .step .title {
+          font-family: Montserrat, sans-serif;
+          font-size: 30px;
+          font-weight: normal;
+          letter-spacing: 2.7px;
+          color: #444444;
+          text-transform: uppercase;
+          padding: 0;
+          margin: 0 0 10px 0;
+        }
+
+.getting-started .steps ul .step .description {
+          font-size: 16px;
+          line-height: 1.88;
+          color: #444444;
+        }
+
+.getting-started .steps ul .step .link {
+          font-family: Montserrat, sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          color: #ffffff;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 10px 20px;
+          background-color: #399aca;
+          border: none;
+          border-radius: 0;
+          cursor: pointer;
+          display: inline-block;
+          margin-top: 30px;
+        }
+
+.getting-started .faq .faq-header {
+      position: relative;
+      height: 396px;
+      width: 1024px;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-position: 50% 35%;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+.getting-started .faq .faq-header h2 {
+        font-family: Montserrat, sans-serif;
+        font-size: 35px;
+        font-weight: normal;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+      }
+
+.getting-started .faq .faq-content {
+      width: 768px;
+      margin: auto;
+    }
+
+.getting-started .faq .faq-content ul {
+        margin: 0;
+        padding: 0;
+      }
+
+.getting-started .faq .faq-content ul li {
+          list-style: none;
+          margin-top: 50px;
+        }
+
+.getting-started .faq .faq-content ul li .question {
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.6px;
+            color: #444444;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: normal;
+            letter-spacing: 1.8px;
+            text-align: left;
+            margin-bottom: 15px;
+          }
+
+.getting-started .faq .faq-content ul li .answer {
+            font-size: 16px;
+            line-height: 1.88;
+            color: #444444;
+          }
+
+.getting-started .gs-contact {
+    width: 1024px;
+    margin: 60px auto 15px auto;
+    background-color: #f7f7f7;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.getting-started .gs-contact p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #444444;
+      margin: 0 20px 0 0;
+      padding: 0;
+    }
+
+.getting-started .gs-contact a {
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      background-color: #399aca;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+    }
