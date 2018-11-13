@@ -4,7 +4,27 @@
 
   <div class="page-banner">
     <div class="durham" style="background-image: url(<?php the_post_thumbnail_url('homepage-banner'); ?>);">
-        <div class="speakers">
+      <?php $speakers = get_field('speaker');
+        if ($speakers && sizeof($speakers) > 0) { ?>
+          <div class="speakers">
+            <h2>This Week's Speaker<?php if (sizeof($speakers) > 1) { echo 's'; } ?></h2>
+            <div class="speaker-list">
+              <?php foreach ($speakers as $speaker) {
+                $img_url = $speaker["profile_picture"]["sizes"]["profile-picture"]; 
+                if (!$img_url) { $img_url = get_theme_file_uri('images/user/user@2x.png');}?>
+                <div class="speaker">
+                  <img src="<?php echo $img_url; ?>" alt="<?php echo $speaker["name"] . "profile picture"; ?>">
+                  <div class="name"><?php echo $speaker["name"]; ?></div>
+                  <div><?php echo $speaker["organization"]; ?></div>
+                </div>
+              <?php }
+              ?>
+            </div>
+          </div>
+        <?php }
+      ?>    
+    
+    
           <h1></h1>
         </div>
       </div>

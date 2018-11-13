@@ -14,6 +14,7 @@
     add_image_size('project-banner', 1024, 396, true);
     add_image_size('project-thumbnail', 400, 300, true);
     add_image_size('project-spotlight', 492, 277, true);
+    add_image_size('profile-picture', 120, 120, true);
   }
 
   add_action('after_setup_theme', 'theme_features');
