@@ -9,6 +9,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php get_template_part( 'contact-modal' ); ?>
 
   <header class="header">
     <a href="<?php echo site_url(); ?>">
@@ -20,8 +21,8 @@
         <li <?php if (is_page('about')) echo 'class="current-menu-item"'?>>
           <a href="<?php echo site_url('/about'); ?>">ABOUT</a>
         </li>
-        <li <?php if (is_page('contact')) echo 'class="current-menu-item"'?>>
-          <a href="<?php echo site_url('/contact'); ?>">CONTACT</a>
+        <li>
+          <a style="cursor:pointer" class="contact-link">CONTACT</a>
         </li>
       </ul>
     </nav>

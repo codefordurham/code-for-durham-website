@@ -22,5 +22,24 @@
 
 <?php wp_footer(); ?>
 
+<script>
+  const contactModal = document.querySelector('.contact-modal');
+  const contactLinks = document.querySelectorAll('.contact-link');
+  const contactModalClose = document.querySelector('.contact-modal .close');
+
+  for (let i = 0; i < contactLinks.length; i++) {
+    contactLinks[i].addEventListener("click", openContactModal);
+  }
+
+  contactModalClose.addEventListener("click", closeContactModal);
+
+  function openContactModal() {
+    contactModal.classList.add('open');
+  }
+
+  function closeContactModal() {
+    contactModal.classList.remove('open');
+  }
+</script>
 </body>
 </html>

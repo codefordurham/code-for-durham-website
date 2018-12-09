@@ -1,0 +1,85 @@
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  &.open {
+    display: flex;
+  }
+
+  .modal-content {
+    border-radius: 5px;
+    box-shadow: 0 22px 60px 0 rgba(0, 0, 0, 0.24);
+    background-color: #ffffff;
+    width: 525px;
+    padding: 50px 75px 40px 75px;
+    box-sizing: border-box;
+    .modal-body {
+      position: relative;
+      label {
+        color: $textDark;
+        font-family: $headerFont;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1.3px;
+        display: block;
+        &.error {
+          color: $red;
+        }
+      }
+      input, textarea {
+        display: block;
+        margin: 5px 0 20px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: #eeeeee;
+        border: none;
+        font-family: $mainFont;
+        font-size: 14px;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        &.error {
+          border: 1px solid $red;
+        }
+      }
+      .send-button {
+        @mixin link-button;
+      }
+      .close {
+        position: absolute;
+        color: #9d9d9d;
+        font-size: 2rem;
+        top: -38px;
+        right: -50px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover, &:focus {
+          color: black;
+        }
+      }
+      .sent-message {
+        text-align: center;
+        padding-bottom: 10px;
+        .sent-message-header {
+          @mixin section-headers;
+          font-size: 20px;
+          font-weight: normal;
+          letter-spacing: 1.6px;
+        }
+        .sent-message-text {
+          font-size: 16px;
+          color: $textDark;
+          margin: 10px 0 30px;
+        }
+      }
+    }
+  }
+}
