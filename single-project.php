@@ -91,9 +91,9 @@
               <div class="contact-name"><?php echo $contact; ?></div>
               <div class="contact-title">Project Leader</div>
             </div>
-            <?php $email = get_field('project_leader_email');
-              if ($email) {
-                echo '<div class="contact-button"><button>Contact</button></div>';
+            <?php $project_leader_email = get_field('project_leader_email');
+              if ($project_leader_email) {
+                echo '<div class="contact-button"><a href="mailto:' . antispambot($project_leader_email) . '?subject=Code For Durham">Contact</a></div>';
               }
             ?>
           </section>

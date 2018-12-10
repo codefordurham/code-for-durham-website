@@ -179,7 +179,7 @@
     }
     .contact-button {
       margin-left: 52px;
-      button {
+      a {
         @mixin link-button;
       }
     }
