@@ -57,7 +57,7 @@
 
       <section class="gs-contact">
         <p>Still have a question?</p>
-        <a href="">Contact</a>
+        <a style="cursor:pointer" class="contact-link">Contact</a>
       </section>
 
     </main>
