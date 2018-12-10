@@ -3,6 +3,7 @@
 <div>
 
   <div class="page-banner">
+    <div class="overlay"></div>
     <div class="durham" style="background-image: url(<?php the_post_thumbnail_url('homepage-banner'); ?>);">
       <?php $speakers = get_field('speaker');
         if ($speakers && sizeof($speakers) > 0) { ?>
@@ -22,13 +23,8 @@
             </div>
           </div>
         <?php }
-      ?>    
-    
-    
-          <h1></h1>
-        </div>
-      </div>
-    <div class="overlay"></div>
+      ?>
+    </div>
   </div>
 
   <section class="boxes">
