@@ -5,6 +5,7 @@
   @media screen and (max-width: $mobile) {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 80px;
   }
 
   h2 {
@@ -35,6 +36,8 @@
         padding-bottom: 18px;
         text-align: left;
         padding-left: 85px;
+        display: flex;
+        align-items: center;
         img {
           margin-right: 21px;
         }
@@ -47,6 +50,10 @@
         }
         &:last-of-type {
           padding-bottom: 0;
+        }
+        @media screen and (max-width: $mobile) {
+          padding-left: 0;
+          justify-content: center;
         }
       }
     }
@@ -80,8 +87,16 @@
   font-size: 16px;
   font-weight: bold;
   color: $textWhite;
+  @media screen and (max-width: $mobile) {
+    justify-content: center;
+    height: 68px;
+    padding: 0 7%;
+  }
 
   .logo {
     width: 126px;
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
   }
 }

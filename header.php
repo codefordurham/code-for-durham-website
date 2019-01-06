@@ -17,7 +17,7 @@
     </a>
     <nav class="navigation">
       <ul>
-        <li><p class="slogan"><?php bloginfo('description'); ?></p></li>
+        <li class="slogan"><p><?php bloginfo('description'); ?></p></li>
         <li <?php if (is_page('about')) echo 'class="current-menu-item"'?>>
           <a href="<?php echo site_url('/about'); ?>">ABOUT</a>
         </li>

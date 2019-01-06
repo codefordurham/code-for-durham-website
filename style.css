@@ -403,6 +403,15 @@ body {
   z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+
+.header {
+    flex-direction: column;
+    height: auto;
+    align-items: center
+}
+  }
+
 .header .logo {
     margin-top: 13px;
     width: 184px;
@@ -426,12 +435,26 @@ body {
         margin-left: 3rem;
       }
 
-.header .navigation ul li p.slogan {
+@media screen and (max-width: 768px) {
+
+.header .navigation ul li {
+          margin: 1.5rem
+      }
+        }
+
+.header .navigation ul li.slogan {
           margin-right: 1.5rem;
           font-size: 14px;
           font-weight: 300;
           color: #ffffff;
         }
+
+@media screen and (max-width: 768px) {
+
+.header .navigation ul li.slogan {
+            display: none
+        }
+          }
 
 .header .navigation ul li a {
           font-family: Montserrat, sans-serif;
@@ -933,7 +956,8 @@ body {
 
 .contact {
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    padding-bottom: 80px
 }
   }
 
@@ -979,6 +1003,8 @@ body {
         padding-bottom: 18px;
         text-align: left;
         padding-left: 85px;
+        display: flex;
+        align-items: center;
       }
 
 .contact .follow ul li img {
@@ -995,6 +1021,14 @@ body {
 
 .contact .follow ul li:last-of-type {
           padding-bottom: 0;
+        }
+
+@media screen and (max-width: 768px) {
+
+.contact .follow ul li {
+          padding-left: 0;
+          justify-content: center
+      }
         }
 
 .contact .sponsors {
@@ -1032,9 +1066,25 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 768px) {
+
+.footer {
+    justify-content: center;
+    height: 68px;
+    padding: 0 7%
+}
+  }
+
 .footer .logo {
     width: 126px;
   }
+
+@media screen and (max-width: 768px) {
+
+.footer .logo {
+      display: none
+  }
+    }
 
 .project-page h2 {
     font-family: Montserrat, sans-serif;
