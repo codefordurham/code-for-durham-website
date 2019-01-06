@@ -19,6 +19,8 @@ $prototyping: $mainBlue;
 $headerFont: Montserrat, sans-serif;
 $mainFont: Roboto, sans-serif;
 
+/* breakpoints */
+$mobile: 768px;
 
 @define-mixin section-headers {
   font-family: $headerFont;

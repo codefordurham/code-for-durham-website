@@ -1,5 +1,5 @@
 .header {
-  padding: 0 10%;
+  padding: 0 8%;
   height: 71px;
   background-color: $mainBlue;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.65);
@@ -24,10 +24,10 @@
       align-items: center;
       li {
         list-style-type: none;
-        margin-left: 40px;
+        margin-left: 3rem;
 
         p.slogan {
-          margin-right: 20px;
+          margin-right: 1.5rem;
           font-size: 14px;
           font-weight: 300;
           color: $textWhite;

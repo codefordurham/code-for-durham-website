@@ -1,5 +1,5 @@
 <section class="contact">
-  <div class="follow">
+  <div class="follow contact-section">
     <h2>JOIN IN</h2>
     <ul>
       <li><img src="<?php echo get_theme_file_uri('/images/meetup.png'); ?>" alt="meetup logo" style="width:40px;height:40px"><a href="https://www.meetup.com/Triangle-Code-for-America/">/Triangle-Code-for-America</a></li>
@@ -9,9 +9,11 @@
       <li><img src="<?php echo get_theme_file_uri('/images/github.svg'); ?>" alt="github logo"><a href="https://github.com/codefordurham">/codefordurham</a></li>
     </ul>
   </div>
-  <div class="sponsors">
+  <div class="sponsors contact-section">
     <h2>CFD SPONSORS</h2>
-    <img src="<?php echo get_theme_file_uri('/images/caktus-logo.png'); ?>" alt="">
+    <div class="sponsor-logos">
+      <img src="<?php echo get_theme_file_uri('/images/caktus-logo.png'); ?>" alt="">
+    </div>
   </div>	
 </section>
 
