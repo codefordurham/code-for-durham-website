@@ -535,6 +535,7 @@ body {
       align-items: center;
       justify-content: center;
       border-radius: 10px 10px 0 0;
+      text-decoration: none;
     }
 
 .boxes .box .box-header h2 {

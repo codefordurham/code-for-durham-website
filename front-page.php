@@ -29,18 +29,17 @@
 
   <section class="boxes">
     <div class="box">
-      <div class="box-header next_meetup">
+      <?php 
+        $next_meetup = get_next_meetup(); 
+        $start_datetime = date("l, M j, g:i", ($next_meetup->time + $next_meetup->utc_offset)/1000);
+        $end_time = date("g:ia", ($next_meetup->time + $next_meetup->utc_offset + $next_meetup->duration)/1000);
+        $full_address = $next_meetup->venue->address_1 . ', ' . $next_meetup->venue->city . ', ' . $next_meetup->venue->state;
+      ?>
+      <a class="box-header next_meetup" href="<?php echo $next_meetup->link; ?>">
         <h2>NEXT MEETUP</h2>
-      </div>
+      </a>
       <div class="box-body meetup">
         <div class="meetup_info">
-          <?php 
-            $next_meetup = get_next_meetup(); 
-            $start_datetime = date("l, M j, g:i", ($next_meetup->time + $next_meetup->utc_offset)/1000);
-            $end_time = date("g:ia", ($next_meetup->time + $next_meetup->utc_offset + $next_meetup->duration)/1000);
-            $full_address = $next_meetup->venue->address_1 . ', ' . $next_meetup->venue->city . ', ' . $next_meetup->venue->state;
-          ?>
-
           <div class="meetup_datetime">
             <img src="<?php echo get_theme_file_uri('images/calendar.svg'); ?>" alt="">
             <?php echo $start_datetime . ' - ' . $end_time ?>
@@ -59,13 +58,12 @@
 
           <a href="<?php echo $next_meetup->link; ?>">JOIN</a>
         </div>
-
       </div>
     </div>
     <div class="box">
-      <div class="box-header get_started">
+      <a class="box-header get_started" href="<?php echo site_url('/getting-started'); ?>">
         <h2>GET STARTED</h2>
-      </div>
+      </a>
       <div class="box-body faq">
         <ul>
           <li>
