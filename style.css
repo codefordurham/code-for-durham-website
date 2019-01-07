@@ -1377,6 +1377,13 @@ body {
     align-items: center;
   }
 
+@media screen and (max-width: 768px) {
+
+.getting-started .gs-header {
+      height: 250px
+  }
+    }
+
 .getting-started .gs-header h1 {
       margin: 0;
       padding: 0;
@@ -1388,23 +1395,15 @@ body {
     }
 
 .getting-started .steps {
-    width: 768px;
+    max-width: 768px;
     margin: 80px auto 100px auto;
   }
 
-.getting-started .steps h2 {
-      font-family: Montserrat, sans-serif;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 1.6px;
-      color: #444444;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 20px;
-      font-weight: normal;
-      letter-spacing: 1.8px;
-      padding: 0;
-      margin: 0 0 50px 0;
+@media screen and (max-width: 768px) {
+
+.getting-started .steps {
+      margin: 50px 2rem 80px 2rem
+  }
     }
 
 .getting-started .steps ul {
@@ -1414,67 +1413,112 @@ body {
 
 .getting-started .steps ul .step {
         list-style: none;
-        display: flex;
-        align-items: baseline;
         margin-bottom: 58px;
       }
 
-.getting-started .steps ul .step .number {
-          display: block;
-          height: 94px;
-          width: 94px;
-          flex-shrink: 0;
-          border-radius: 100%;
-          background-color: #d14256;
+.getting-started .steps ul .step .step-header {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          font-family: Montserrat, sans-serif;
-          font-size: 40px;
-          font-weight: 900;
-          letter-spacing: 3.6px;
-          color: #ffffff;
-          margin-right: 30px;
+          align-items: baseline;
         }
 
-.getting-started .steps ul .step .title {
-          font-family: Montserrat, sans-serif;
-          font-size: 30px;
-          font-weight: normal;
-          letter-spacing: 2.7px;
-          color: #444444;
-          text-transform: uppercase;
-          padding: 0;
-          margin: 0 0 10px 0;
+.getting-started .steps ul .step .step-header .step-number {
+            height: 94px;
+            width: 94px;
+            flex-shrink: 0;
+            border-radius: 100%;
+            background-color: #d14256;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Montserrat, sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-right: 30px;
+          }
+
+@media screen and (max-width: 768px) {
+
+.getting-started .steps ul .step .step-header .step-number {
+              height: 70px;
+              width: 70px;
+              font-size: 30px;
+              font-weight: bold;
+              margin-right: 22px
+          }
+            }
+
+.getting-started .steps ul .step .step-header .step-title {
+            font-family: Montserrat, sans-serif;
+            font-size: 30px;
+            font-weight: normal;
+            letter-spacing: 2.7px;
+            color: #444444;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0 0 10px 0;
+          }
+
+@media screen and (max-width: 768px) {
+
+.getting-started .steps ul .step .step-header .step-title {
+              font-size: 22px;
+              letter-spacing: 1.8px
+          }
+            }
+
+.getting-started .steps ul .step .step-main {
+          display: flex;
+          margin-top: -0.5em;
         }
 
-.getting-started .steps ul .step .description {
-          font-size: 16px;
-          line-height: 1.88;
-          color: #444444;
-        }
+@media screen and (max-width: 768px) {
 
-.getting-started .steps ul .step .link {
-          font-family: Montserrat, sans-serif;
-          font-size: 16px;
-          font-weight: bold;
-          letter-spacing: 1.5px;
-          color: #ffffff;
-          text-decoration: none;
-          text-transform: uppercase;
-          padding: 10px 20px;
-          background-color: #399aca;
-          border: none;
-          border-radius: 0;
-          cursor: pointer;
-          display: inline-block;
-          margin-top: 30px;
+.getting-started .steps ul .step .step-main {
+            margin-top: 1em
         }
+          }
+
+.getting-started .steps ul .step .step-main .step-blank {
+            width: 94px;
+            margin-right: 30px;
+            flex-shrink: 0;
+          }
+
+@media screen and (max-width: 768px) {
+
+.getting-started .steps ul .step .step-main .step-blank {
+              display: none
+          }
+            }
+
+.getting-started .steps ul .step .step-main .step-content .step-description {
+              font-size: 16px;
+              line-height: 1.88;
+              color: #444444;
+            }
+
+.getting-started .steps ul .step .step-main .step-content .step-link {
+              font-family: Montserrat, sans-serif;
+              font-size: 16px;
+              font-weight: bold;
+              letter-spacing: 1.5px;
+              color: #ffffff;
+              text-decoration: none;
+              text-transform: uppercase;
+              padding: 10px 20px;
+              background-color: #399aca;
+              border: none;
+              border-radius: 0;
+              cursor: pointer;
+              display: inline-block;
+              margin-top: 30px;
+            }
 
 .getting-started .faq .faq-header {
       position: relative;
       height: 396px;
-      width: 1024px;
+      max-width: 1024px;
       margin: auto;
       background-repeat: no-repeat;
       background-position: 50% 35%;
@@ -1495,9 +1539,16 @@ body {
       }
 
 .getting-started .faq .faq-content {
-      width: 768px;
+      max-width: 768px;
       margin: auto;
     }
+
+@media screen and (max-width: 768px) {
+
+.getting-started .faq .faq-content {
+        margin: 0 2rem
+    }
+      }
 
 .getting-started .faq .faq-content ul {
         margin: 0;
@@ -1531,7 +1582,7 @@ body {
           }
 
 .getting-started .gs-contact {
-    width: 1024px;
+    max-width: 1024px;
     margin: 60px auto 15px auto;
     background-color: #f7f7f7;
     padding: 25px;
@@ -1539,6 +1590,20 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+@media screen and (max-width: 1024px) {
+
+.getting-started .gs-contact {
+      margin: 60px 2rem 15px 2rem
+  }
+    }
+
+@media screen and (max-width: 768px) {
+
+.getting-started .gs-contact {
+      flex-direction: column
+  }
+    }
 
 .getting-started .gs-contact p {
       font-size: 20px;
@@ -1548,6 +1613,13 @@ body {
       margin: 0 20px 0 0;
       padding: 0;
     }
+
+@media screen and (max-width: 768px) {
+
+.getting-started .gs-contact p {
+        margin: 0 0 0.5em 0
+    }
+      }
 
 .getting-started .gs-contact a {
       font-family: Montserrat, sans-serif;

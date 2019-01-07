@@ -15,17 +15,21 @@
 
       <?php $steps = get_field('steps'); ?>
       <section class="steps" id="how-to-help">
-        <h2>Getting Started</h2>
         <ul>
           <?php foreach ($steps as $index=>$step) { ?>
             <li class="step">
-              <div class="number"><?php echo $index + 1; ?></div>
-              <div>
-                <div class="title"><?php echo $step["title"]; ?></div>
-                <div class="description"><?php echo $step["description"]?></div>
-                <?php if ($step["link"]) { ?>
-                  <a class="link" href="<?php echo $step["link"]; ?>"><?php echo $step["link_text"]; ?></a>
-                <?php } ?>
+              <div class="step-header">
+                <div class="step-number"><?php echo $index + 1; ?></div>
+                <div class="step-title"><?php echo $step["title"]; ?></div>
+              </div>
+              <div class="step-main">
+                <div class="step-blank"></div>
+                <div class="step-content">
+                  <div class="step-description"><?php echo $step["description"]?></div>
+                  <?php if ($step["link"]) { ?>
+                    <a class="step-link" href="<?php echo $step["link"]; ?>"><?php echo $step["link_text"]; ?></a>
+                  <?php } ?>
+                </div>
               </div>
             </li>
           <?php }
