@@ -6,6 +6,11 @@
     background-position: 50% 50%;
     background-size: cover;
     height: 701px;
+    @media screen and (max-width: $mobile) {
+      height: auto;
+      padding-bottom: 40px;
+      min-height: 250px;
+    }
 
     h1 {
       margin-top: 0;
@@ -28,6 +33,9 @@
         color: $textWhite;
         margin: 0;
         padding: 65px 40px 40px 40px;
+        @media screen and (max-width: $mobile) {
+          font-size: 24px;
+        }
       }
       .speaker-list {
         display: flex;
@@ -35,16 +43,27 @@
         color: $textWhite;
         text-align: center;
         font-size: 18px;
+        @media screen and (max-width: $mobile) {
+          flex-direction: column;
+          align-items: center;
+        }
         .speaker {
           width: 200px;
           margin-left: 20px;
           margin-right: 20px;
+          @media screen and (max-width: $mobile) {
+            margin-bottom: 40px;
+          }
           img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
             border: 2px solid #d8d8d8;
             background-color: #d8d8d8;
+            @media screen and (max-width: $mobile) {
+              width: 60px;
+              height: 60px;
+            }
           }
           .name {
             font-size: 22px;
@@ -63,6 +82,9 @@
   background-color: #ffffff;
   position: relative;
   z-index: 2;
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+  }
 
   .box {
     width: 487px;
@@ -70,6 +92,12 @@
     margin-top: -250px;
     border-radius: 10px;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.13);
+    @media screen and (max-width: $mobile) {
+      margin-top: 0;
+      border-radius: 0;
+      width: 100%;
+      height: auto;
+    }
 
     .box-header {
       height: 135px;
@@ -78,6 +106,9 @@
       justify-content: center;
       border-radius: 10px 10px 0 0;
       text-decoration: none;
+      @media screen and (max-width: $mobile) {
+        border-radius: 0;
+      }
       h2 {
         @mixin section-headers;
         font-size: 20px;
@@ -100,6 +131,10 @@
       position: relative;
       padding: 30px;
       box-sizing: border-box;
+      @media screen and (max-width: $mobile) {
+        border-radius: 0;
+        height: auto;
+      }
 
       .cta {
         position: absolute;
@@ -108,9 +143,20 @@
         a {
           @mixin link-button;
         }
+        @media screen and (max-width: $mobile) {
+          position: relative;
+          margin: auto;
+          bottom: 0;
+          right: 0;
+          text-align: center;
+          margin-top: 30px;
+        }
       }
 
       &.meetup {
+        @media screen and (max-width: $mobile) {
+          text-align: center;
+        }
         .meetup_datetime {
           display: flex;
           align-items: center;
@@ -120,6 +166,13 @@
           margin-bottom: 20px;
           img {
             margin-right: 15px;
+            @media screen and (max-width: $mobile) {
+              margin-right: 0;
+              margin-bottom: 0.5em;
+            }
+          }
+          @media screen and (max-width: $mobile) {
+            flex-direction: column;
           }
         }
 
@@ -146,6 +199,13 @@
             font-size: 16px;
             color: $textDark;
             margin-right: 20px;
+            @media screen and (max-width: $mobile) {
+              margin-right: 0;
+              margin-top: 1em;
+            }
+          }
+          @media screen and (max-width: $mobile) {
+            flex-direction: column-reverse;
           }
         }
       }
@@ -175,8 +235,13 @@
             }
           }
         }
-        .cta a {
-          background-color: $redLight;
+        .cta {
+          a {
+            background-color: $redLight;
+          }
+          @media screen and (max-width: $mobile) {
+            margin-bottom: 15px;
+          }
         }
       }
     }
@@ -184,9 +249,12 @@
 }
 
 .projects {
+  padding-top: 80px;
+  @media screen and (max-width: $mobile) {
+    background-color: #fafafa;
+  }
   h2 {
     @mixin section-headers;
-    margin-top: 80px;
     padding-bottom: 30px;
   }
 
@@ -267,6 +335,10 @@
     background-color: $greyLight;
     display: flex;
     padding: 50px 10%;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      padding: 0;
+    }
 
     .spotlight-image {
       flex: 1;
@@ -274,6 +346,13 @@
       img {
         float: right;
         max-width: 100%;
+        @media screen and (max-width: $mobile) {
+          float: none;
+        }
+      }
+      @media screen and (max-width: $mobile) {
+        margin-right: 0;
+        text-align: center;
       }
     }
 
@@ -281,6 +360,10 @@
       flex: 1;
       margin-left: 20px;
       padding: 0;
+      @media screen and (max-width: $mobile) {
+        margin-left: 0;
+        padding: 0 1.5rem 2rem 50px;
+      }
       
       .project-title {
         margin: 0;
@@ -292,6 +375,9 @@
         a {
           color: $mainBlue;
           text-decoration: none;
+        }
+        @media screen and (max-width: $mobile) {
+          margin-top: 50px;
         }
       }
 
