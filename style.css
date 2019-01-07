@@ -1310,7 +1310,7 @@ body {
       }
 
 .about {
-  width: 768px;
+  max-width: 768px;
   margin: auto;
   font-size: 16px;
   line-height: 1.88;
@@ -1318,9 +1318,18 @@ body {
 
 }
 
+@media screen and (max-width: 768px) {
+
+.about {
+    margin: 0 2rem
+
+}
+  }
+
 .about p > iframe, .about p > img {
     display: block;
     margin: auto;
+    max-width: 100%;
   }
 
 .about h2 {
@@ -1349,9 +1358,25 @@ body {
       margin-top: 60px;
     }
 
+@media screen and (max-width: 768px) {
+
+.about .who-work-with .government-types {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px
+    }
+      }
+
 .about .who-work-with .government-types .government-type.county {
           margin-left: 20px;
         }
+
+@media screen and (max-width: 768px) {
+
+.about .who-work-with .government-types .government-type.county {
+            margin-left: 0
+        }
+          }
 
 .about .who-work-with .government-types .government-type div {
           font-size: 18px;
@@ -1361,6 +1386,23 @@ body {
 
 .about .who-work-with .government-types .government-type img {
           height: 220px;
+        }
+
+@media screen and (max-width: 768px) {
+
+.about .who-work-with .government-types .government-type img {
+            height: 150px
+        }
+          }
+
+@media screen and (max-width: 768px) {
+
+.about .who-work-with .government-types .government-type {
+          margin-bottom: 40px
+      }
+          .about .who-work-with .government-types .government-type:last-of-type {
+            margin-bottom: 0;
+          }
         }
 
 .about .civic-hacking {
