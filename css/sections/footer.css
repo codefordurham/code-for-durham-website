@@ -16,7 +16,7 @@
   }
 
   .contact-section {
-    width: 475px;
+    max-width: 475px;
     box-sizing: border-box;
   }
 
@@ -47,6 +47,11 @@
           color: $mainBlue;
           text-decoration: none;
           white-space: nowrap;
+          @media screen and (max-width: $mobile) {
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
         }
         &:last-of-type {
           padding-bottom: 0;

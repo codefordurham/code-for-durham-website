@@ -13,7 +13,7 @@
   }
 
   .project-header {
-    width: 1024px;
+    max-width: 1024px;
     height: 396px;
     margin: 60px auto 0 auto;
     position: relative;
@@ -26,12 +26,22 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+    @media screen and (max-width: $mobile) {
+      height: 250px;
+      padding: 1rem;
+      text-align: center;
+      margin: 0;
+    }
     h1 {
       font-size: 40px;
       font-weight: normal;
       margin-bottom: 45px;
       position: relative;
       z-index: 5;
+      @media screen and (max-width: $mobile) {
+        font-size: 30px;
+        margin-bottom: 35px;
+      }
     }
     .project-status {
       font-size: 18px;
@@ -46,12 +56,17 @@
   }
 
   .project-github {
-    width: 1024px;
+    max-width: 1024px;
     margin: auto;
     text-align: center;
     margin-top: -60px;
     position: relative;
     z-index: 5;
+    @media screen and (max-width: $mobile) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+    }
+    
     .project-github-logo {
       width: 72px;
       height: 71px;
@@ -70,32 +85,38 @@
       color: $mainBlue;
       text-decoration: none;
       margin-top: -4px;
+      @media screen and (max-width: $mobile) {
+        font-size: 16px;
+        font-weight: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+
+  @define-mixin project-section $sectionWidth, $top, $bottom {
+    max-width: $sectionWidth;
+    margin: $top auto 0 auto;
+    @media screen and (max-width: $mobile) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+    }
+    h2 {
+      margin-bottom: $bottom;
     }
   }
 
   .project-objective {
-    width: 768px;
-    margin: 50px auto 0 auto;
-    h2 {
-      margin-bottom: 13px;
-    }
+    @mixin project-section 768px, 50px, 13px;
   }
 
   .project-details {
-    width: 768px;
-    margin: 50px auto 0 auto;
-    h2 {
-      margin-bottom: 25px;
-    }
+    @mixin project-section 768px, 50px, 25px;
   }
 
   .project-links {
-    width: 768px;
-    margin: 50px auto 0 auto;
+    @mixin project-section 768px, 50px, 30px;
     text-align: center;
-    h2 {
-      margin-bottom: 30px;
-    }
     ul {
       margin: 0;
       padding: 0;
@@ -105,22 +126,28 @@
         color: $mainBlue;
         font-family: $headerFont;
         font-size: 25px;
+        @media screen and (max-width: $mobile) {
+          font-size: 18px;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
       }
     }
   }
 
   .project-skills {
-    width: 896px;
-    margin: 80px auto 0 auto;
+    @mixin project-section 896px, 80px, 20px;
     text-align: center;
-    h2 {
-      margin-bottom: 20px;
-    }
     p {
       font-size: 20px;
       color: $textDark;
       padding: 0;
       margin: 0;
+      @media screen and (max-width: $mobile) {
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 0.5rem;
+      }
     }
     ul {
       margin: 0;
@@ -142,18 +169,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: $mobile) {
+          font-size: 14px;
+          padding: 8px 22px;
+        }
       }
     }
   }
 
   .project-contact {
-    width: 1024px;
-    margin: 60px auto 0 auto;
+    @mixin project-section 1024px, 60px, 20px;
     padding: 15px;
     background-color: $greyLight;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
     .project-image-container {
       width: 60px;
       height: 60px;
@@ -161,6 +194,9 @@
       margin-right: 16px;
       img {
         max-width: 100%;
+      }
+      @media screen and (max-width: $mobile) {
+        margin-right: 0;
       }
     }
     .contact-name {
@@ -181,6 +217,10 @@
       margin-left: 52px;
       a {
         @mixin link-button;
+      }
+      @media screen and (max-width: $mobile) {
+        margin: 2rem 0 1rem 0;
+
       }
     }
   }

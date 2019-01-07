@@ -975,7 +975,7 @@ body {
   }
 
 .contact .contact-section {
-    width: 475px;
+    max-width: 475px;
     box-sizing: border-box;
   }
 
@@ -1018,6 +1018,15 @@ body {
           text-decoration: none;
           white-space: nowrap;
         }
+
+@media screen and (max-width: 768px) {
+
+.contact .follow ul li a {
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word
+        }
+          }
 
 .contact .follow ul li:last-of-type {
           padding-bottom: 0;
@@ -1106,7 +1115,7 @@ body {
   }
 
 .project-page .project-header {
-    width: 1024px;
+    max-width: 1024px;
     height: 396px;
     margin: 60px auto 0 auto;
     position: relative;
@@ -1121,6 +1130,16 @@ body {
     background-size: cover;
   }
 
+@media screen and (max-width: 768px) {
+
+.project-page .project-header {
+      height: 250px;
+      padding: 1rem;
+      text-align: center;
+      margin: 0
+  }
+    }
+
 .project-page .project-header h1 {
       font-size: 40px;
       font-weight: normal;
@@ -1128,6 +1147,14 @@ body {
       position: relative;
       z-index: 5;
     }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-header h1 {
+        font-size: 30px;
+        margin-bottom: 35px
+    }
+      }
 
 .project-page .project-header .project-status {
       font-size: 18px;
@@ -1141,13 +1168,21 @@ body {
     }
 
 .project-page .project-github {
-    width: 1024px;
+    max-width: 1024px;
     margin: auto;
     text-align: center;
     margin-top: -60px;
     position: relative;
     z-index: 5;
   }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-github {
+      margin-right: 2rem;
+      margin-left: 2rem
+  }
+    }
 
 .project-page .project-github .project-github-logo {
       width: 72px;
@@ -1171,29 +1206,63 @@ body {
       margin-top: -4px;
     }
 
+@media screen and (max-width: 768px) {
+
+.project-page .project-github a {
+        font-size: 16px;
+        font-weight: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word
+    }
+      }
+
 .project-page .project-objective {
-    width: 768px;
+    max-width: 768px;
     margin: 50px auto 0 auto;
   }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-objective {
+      margin-right: 2rem;
+      margin-left: 2rem;
+  }
+    }
 
 .project-page .project-objective h2 {
       margin-bottom: 13px;
     }
 
 .project-page .project-details {
-    width: 768px;
+    max-width: 768px;
     margin: 50px auto 0 auto;
   }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-details {
+      margin-right: 2rem;
+      margin-left: 2rem;
+  }
+    }
 
 .project-page .project-details h2 {
       margin-bottom: 25px;
     }
 
 .project-page .project-links {
-    width: 768px;
+    max-width: 768px;
     margin: 50px auto 0 auto;
     text-align: center;
   }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-links {
+      margin-right: 2rem;
+      margin-left: 2rem
+  }
+    }
 
 .project-page .project-links h2 {
       margin-bottom: 30px;
@@ -1212,11 +1281,28 @@ body {
         font-size: 25px;
       }
 
+@media screen and (max-width: 768px) {
+
+.project-page .project-links ul a {
+          font-size: 18px;
+          word-wrap: break-word;
+          overflow-wrap: break-word
+      }
+        }
+
 .project-page .project-skills {
-    width: 896px;
+    max-width: 896px;
     margin: 80px auto 0 auto;
     text-align: center;
   }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-skills {
+      margin-right: 2rem;
+      margin-left: 2rem
+  }
+    }
 
 .project-page .project-skills h2 {
       margin-bottom: 20px;
@@ -1228,6 +1314,15 @@ body {
       padding: 0;
       margin: 0;
     }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-skills p {
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 0.5rem
+    }
+      }
 
 .project-page .project-skills ul {
       margin: 0;
@@ -1253,8 +1348,16 @@ body {
         align-items: center;
       }
 
+@media screen and (max-width: 768px) {
+
+.project-page .project-skills ul li {
+          font-size: 14px;
+          padding: 8px 22px
+      }
+        }
+
 .project-page .project-contact {
-    width: 1024px;
+    max-width: 1024px;
     margin: 60px auto 0 auto;
     padding: 15px;
     background-color: #f7f7f7;
@@ -1262,6 +1365,25 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-contact {
+      margin-right: 2rem;
+      margin-left: 2rem
+  }
+    }
+
+.project-page .project-contact h2 {
+      margin-bottom: 20px;
+    }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-contact {
+      flex-direction: column
+  }
+    }
 
 .project-page .project-contact .project-image-container {
       width: 60px;
@@ -1272,6 +1394,13 @@ body {
 
 .project-page .project-contact .project-image-container img {
         max-width: 100%;
+      }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-contact .project-image-container {
+        margin-right: 0
+    }
       }
 
 .project-page .project-contact .contact-name {
@@ -1307,6 +1436,14 @@ body {
         border: none;
         border-radius: 0;
         cursor: pointer;
+      }
+
+@media screen and (max-width: 768px) {
+
+.project-page .project-contact .contact-button {
+        margin: 2rem 0 1rem 0
+    }
+
       }
 
 .about {
