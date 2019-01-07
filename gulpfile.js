@@ -3,10 +3,10 @@ settings = require('./settings'),
 browserSync = require('browser-sync').create(),
 postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer'),
+mixins = require('postcss-mixins'),
 cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
 cssImport = require('postcss-import'),
-mixins = require('postcss-mixins'),
 colorFunction = require('postcss-color-function');
 
 gulp.task('styles', function() {
