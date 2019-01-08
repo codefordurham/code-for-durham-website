@@ -8,7 +8,7 @@
 
     <main class="getting-started">
 
-      <section class="gs-header" style="background-image: url('<?php echo get_theme_file_uri('images/aleksandar-cvetanovic-1068417-unsplash.jpg'); ?>');">
+      <section class="gs-header" style="background-image: url('<?php echo get_theme_file_uri('images/aleksandar-cvetanovic-1068417-unsplash-min.jpg'); ?>');">
         <div class="overlay"></div>
         <h1>Getting Started</h1>
       </section>
@@ -40,7 +40,7 @@
       <?php $faqs = get_field('faqs');
         if ($faqs && sizeof($faqs) > 0) { ?>
           <section class="faq">
-            <div class="faq-header" style="background-image: url('<?php echo get_theme_file_uri('images/camylla-battani-784361-unsplash.jpg'); ?>');">
+            <div class="faq-header" style="background-image: url('<?php echo get_theme_file_uri('images/camylla-battani-784361-unsplash-min.jpg'); ?>');">
               <div class="overlay"></div>
               <h2>Frequent Questions</h2>
             </div>
