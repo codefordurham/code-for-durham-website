@@ -2,11 +2,34 @@
   <div class="follow contact-section">
     <h2>JOIN IN</h2>
     <ul>
-      <li><img src="<?php echo get_theme_file_uri('/images/meetup.png'); ?>" alt="meetup logo" style="width:40px;height:40px"><a href="https://www.meetup.com/Triangle-Code-for-America/" target="_blank">/Triangle-Code-for-America</a></li>
-      <li><img src="<?php echo get_theme_file_uri('/images/twitter.svg'); ?>" alt="twitter logo"><a href="https://twitter.com/codefordurham" target="_blank">@CodeForDurham</a></li>
-      <li><img src="<?php echo get_theme_file_uri('/images/facebook.svg'); ?>" alt="facebook logo"><a href="https://www.facebook.com/codefordurham/" target="_blank">/codefordurham</a></li>
-      <li><img src="<?php echo get_theme_file_uri('/images/slack.svg'); ?>" alt="slack logo"><a href="https://open-nc.slack.com/" target="_blank">open-nc.slack.com</a></li>
-      <li><img src="<?php echo get_theme_file_uri('/images/github.svg'); ?>" alt="github logo"><a href="https://github.com/codefordurham" target="_blank">/codefordurham</a></li>
+      <?php 
+        $home = new WP_Query(array(
+          'pagename' => 'home'
+        ));
+        if ( $home->have_posts() ) {
+          while ( $home->have_posts() ) {
+          $home->the_post();
+          $contact_links = get_field('contact_links');
+          if ($contact_links && sizeof($contact_links) > 0) {
+            foreach ($contact_links as $link) {
+              $site_and_image = get_site_and_image($link);
+              ?>
+              <li>
+                <?php if ($site_and_image["image"]) { ?>
+                  <img src="<?php echo get_theme_file_uri('/images/' . $site_and_image["image"]); ?>" alt="<?php echo $site_and_image["site"]; ?> logo" style="width:30px;height:30px">
+                <?php } ?>
+                <a href="<?php echo $link["url"]; ?>" target="_blank">
+                  <?php if ($link["text"]) {
+                    echo $link["text"]; 
+                  } else {
+                    echo $link["url"];
+                  } ?>
+                </a>
+              </li>
+            <?php }
+          }
+        } 
+      } ?>
     </ul>
   </div>
   <div class="sponsors contact-section">
