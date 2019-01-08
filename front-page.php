@@ -126,7 +126,7 @@
       ?>
 
       <div class="project">
-        <a class="project-description submit" href="https://docs.google.com/forms/d/e/1FAIpQLSeegSPgMenQpJj07v_zIvI1-F2gn1P1Y8TAeCOv4cS9zabRkw/viewform">
+        <a class="project-description submit" href="https://docs.google.com/forms/d/e/1FAIpQLSd72N1G209t4k-F51mu61SZMSqXMeObKjJKJSjl_ZL0K23bsw/viewform">
           <h3>Submit your own idea</h3>
         </a>
       </div>
