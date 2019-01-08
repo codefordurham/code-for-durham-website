@@ -63,6 +63,13 @@
         @media screen and (max-width: $mobile) {
           padding-left: 0;
         }
+        &.slack-invite {
+          a {
+            opacity: 0.9;
+            font-size: 0.9em;
+            margin-left: 50px;
+          }
+        }
       }
     }
   }

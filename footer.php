@@ -30,6 +30,7 @@
           }
         } 
       } ?>
+      <li class="slack-invite"><a href="http://code-for-nc-slack-invitations.herokuapp.com/">(Get Slack Invite)</a></li>
     </ul>
   </div>
   <div class="sponsors contact-section">

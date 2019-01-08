@@ -1222,6 +1222,12 @@ body {
       }
         }
 
+.contact .follow ul li.slack-invite a {
+            opacity: 0.9;
+            font-size: 0.9em;
+            margin-left: 50px;
+          }
+
 .contact .sponsors {
     padding-left: 50px;
     padding-right: 85px;
