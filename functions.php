@@ -94,22 +94,24 @@
   add_action('init', 'get_next_meetup');
 
   function get_site_and_image($link) {
-    $domain = parse_url($link["url"], PHP_URL_HOST);
-    preg_match('/^(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)\.\w*/', $domain, $matches, PREG_OFFSET_CAPTURE);
-    $site = $matches[1][0];
-
-    $images = array(
-      'meetup' => 'meetup.png',
-      'twitter' => 'twitter.svg',
-      'facebook' => 'facebook.svg',
-      'open-nc.slack' => 'slack.svg',
-      'github' => 'github.svg',
-    );
-
-    return array(
-      'site' => $site,
-      'image' => $images[$site],
-    );
+    if ($link) {
+      $url = $link["url"];
+      $domain = parse_url($url, PHP_URL_HOST);
+      preg_match('/^(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)\.\w*/', $domain, $matches, PREG_OFFSET_CAPTURE);
+      $site = $matches[1][0];
+  
+      $images = array(
+        'meetup' => 'meetup.png',
+        'twitter' => 'twitter.svg',
+        'facebook' => 'facebook.svg',
+        'open-nc.slack' => 'slack.svg',
+        'github' => 'github.svg',
+      );
+      return array(
+        'site' => $site,
+        'image' => $images[$site],
+      );
+    }
   }
 
   add_action('init', 'get_site_and_image');
