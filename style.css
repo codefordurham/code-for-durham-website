@@ -415,7 +415,9 @@ body {
 .header .logo {
     margin-top: 13px;
     width: 184px;
-    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24);
+    filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.24));
+    -webkit-filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.24));
+    -moz-filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.24));
   }
 
 .header .navigation {
@@ -544,6 +546,9 @@ body {
           width: 200px;
           margin-left: 20px;
           margin-right: 20px;
+          display: block;
+          color: #ffffff;
+          text-decoration: none;
         }
 
 @media screen and (max-width: 768px) {
@@ -836,9 +841,9 @@ body {
 .projects .project-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     position: relative;
+    background-color: #21536c;
   }
 
 .projects .project-list .project {
@@ -1200,6 +1205,11 @@ body {
           text-decoration: none;
           white-space: nowrap;
         }
+
+.contact .follow ul li a:hover {
+            color: #006fa5;
+            text-decoration: underline;
+          }
 
 @media screen and (max-width: 768px) {
 
