@@ -853,10 +853,20 @@ body {
       height: 300px;
       background-color: #399aca;
       background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
       position: relative;
     }
+
+.projects .project-list .project.hover-zoom {
+        transition: all 0.2s ease-in-out;
+        background-size: 125%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+.projects .project-list .project.hover-zoom:hover {
+        background-size: 115%;
+      }
 
 .projects .project-list .project .project-description {
         position: relative;

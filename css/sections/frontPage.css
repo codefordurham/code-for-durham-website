@@ -275,9 +275,18 @@
       height: 300px;
       background-color: $mainBlue;
       background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
       position: relative;
+
+      &.hover-zoom {
+        transition: all 0.2s ease-in-out;
+        background-size: 125%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      &.hover-zoom:hover {
+        background-size: 115%;
+      }
 
       .project-description {
         position: relative;

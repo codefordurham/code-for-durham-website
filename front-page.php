@@ -108,7 +108,7 @@
           while ($projects->have_posts()) {
             $projects->the_post(); ?>
 
-            <div class="project" style="background-image: url(<?php the_post_thumbnail_url('project-thumbnail'); ?>);">
+            <div class="project hover-zoom" style="background-image: url(<?php the_post_thumbnail_url('project-thumbnail'); ?>);">
               <div class="overlay"></div>
               
               <a class="project-description" href="<?php the_permalink(); ?>">
