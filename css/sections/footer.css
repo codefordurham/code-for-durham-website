@@ -69,9 +69,9 @@
         }
         &.slack-invite {
           a {
-            opacity: 0.9;
-            font-size: 0.9em;
             margin-left: 50px;
+            font-size: 16px;
+            font-style: italic;
           }
         }
       }
