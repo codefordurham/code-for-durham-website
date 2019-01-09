@@ -50,7 +50,13 @@
             <h2>Related Links</h2>
             <ul>
               <?php foreach ($links as $link) { ?>
-                <li><a href="<?php echo $link["related_link"]; ?>"><?php echo $link["related_link"]; ?></a></li>
+                <li><a href="<?php echo $link["related_link"]; ?>">
+                  <?php if ($link["link_text"]) {
+                    echo $link["link_text"];
+                  } else {
+                    echo $link["related_link"]; }
+                  ?>
+                </a></li>
               <?php }
               ?>
             </ul>
