@@ -1139,7 +1139,7 @@ body {
 .contact {
   display: flex;
   justify-content: center;
-  padding: 80px 30px 50px 30px;
+  padding: 50px 30px 50px 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1167,18 +1167,29 @@ body {
 .contact .contact-section {
     max-width: 475px;
     box-sizing: border-box;
+    padding-top: 30px;
+    border-top: 1px solid #bdbdbd;
+    flex: 1;
   }
+
+@media screen and (max-width: 768px) {
+
+.contact .contact-section {
+      max-width: 90%;
+      width: 90%
+  }
+    }
 
 .contact .follow {
     padding-right: 50px;
-    border-right: 1px solid #979797;
+    border-right: 1px solid #bdbdbd;
   }
 
 @media screen and (max-width: 768px) {
 
 .contact .follow {
       border-right: none;
-      padding: 0;
+      padding-right: 0;
       padding-bottom: 50px
   }
     }
@@ -1238,7 +1249,9 @@ body {
 @media screen and (max-width: 768px) {
 
 .contact .follow ul li {
-          padding-left: 0
+          margin: auto;
+          padding-left: 0;
+          max-width: 300px
       }
         }
 
@@ -1248,6 +1261,13 @@ body {
             font-style: italic;
           }
 
+@media screen and (max-width: 768px) {
+
+.contact .follow ul li.slack-invite a {
+              font-size: 13px
+          }
+            }
+
 .contact .sponsors {
     padding-left: 50px;
     padding-right: 85px;
@@ -1256,7 +1276,8 @@ body {
 @media screen and (max-width: 768px) {
 
 .contact .sponsors {
-      padding: 0
+      padding-left: 0;
+      padding-right: 0
   }
     }
 

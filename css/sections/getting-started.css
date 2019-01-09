@@ -163,7 +163,7 @@
   .gs-contact {
     max-width: 1024px;
     margin: 60px auto 15px auto;
-    background-color: $greyLight;
+    background-color: $greyLighter;
     padding: 25px;
     display: flex;
     justify-content: center;

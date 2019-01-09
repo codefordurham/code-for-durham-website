@@ -1,7 +1,7 @@
 .contact {
   display: flex;
   justify-content: center;
-  padding: 80px 30px 50px 30px;
+  padding: 50px 30px 50px 30px;
   @media screen and (max-width: $mobile) {
     flex-direction: column;
     align-items: center;
@@ -18,14 +18,21 @@
   .contact-section {
     max-width: 475px;
     box-sizing: border-box;
+    padding-top: 30px;
+    border-top: 1px solid $greyLight;
+    flex: 1;
+    @media screen and (max-width: $mobile) {
+      max-width: 90%;
+      width: 90%;
+    }
   }
 
   .follow {
     padding-right: 50px;
-    border-right: 1px solid #979797;
+    border-right: 1px solid $greyLight;
     @media screen and (max-width: $mobile) {
       border-right: none;
-      padding: 0;
+      padding-right: 0;
       padding-bottom: 50px;
     }
     ul {
@@ -65,13 +72,18 @@
           padding-bottom: 0;
         }
         @media screen and (max-width: $mobile) {
+          margin: auto;
           padding-left: 0;
+          max-width: 300px;
         }
         &.slack-invite {
           a {
             margin-left: 50px;
             font-size: 16px;
             font-style: italic;
+            @media screen and (max-width: $mobile) {
+              font-size: 13px;
+            }
           }
         }
       }
@@ -82,7 +94,8 @@
     padding-left: 50px;
     padding-right: 85px;
     @media screen and (max-width: $mobile) {
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
     .sponsor-logos {
       display: flex;

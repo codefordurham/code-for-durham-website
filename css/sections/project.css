@@ -180,7 +180,7 @@
   .project-contact {
     @mixin project-section 1024px, 60px, 20px;
     padding: 15px;
-    background-color: $greyLight;
+    background-color: $greyLighter;
     display: flex;
     justify-content: center;
     align-items: center;

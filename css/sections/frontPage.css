@@ -344,7 +344,7 @@
   }
 
   .spotlight-project {
-    background-color: $greyLight;
+    background-color: $greyLighter;
     display: flex;
     padding: 50px 10%;
     @media screen and (max-width: $mobile) {
