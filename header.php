@@ -13,7 +13,7 @@
 
   <header class="header">
     <a href="<?php echo site_url(); ?>">
-      <img class="logo" src="<?php echo get_theme_file_uri('/images/logo.png'); ?>" alt="Code for Durham logo">
+      <img class="logo" src="<?php echo get_theme_file_uri('/images/logo/logo_2X.png'); ?>" alt="Code for Durham logo">
     </a>
     <nav class="navigation">
       <ul>

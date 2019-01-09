@@ -16,7 +16,9 @@
   .logo {
     margin-top: 13px;
     width: 184px;
-    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24);
+    filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.24));
+    -webkit-filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.24));
+    -moz-filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.24));
   }
 
   .navigation {
