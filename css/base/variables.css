@@ -22,6 +22,7 @@ $mainFont: Roboto, sans-serif;
 
 /* breakpoints */
 $mobile: 768px;
+$medium: 850px;
 
 @define-mixin section-headers {
   font-family: $headerFont;
