@@ -13,11 +13,11 @@
               <?php foreach ($speakers as $speaker) {
                 $img_url = $speaker["profile_picture"]["sizes"]["profile-picture"]; 
                 if (!$img_url) { $img_url = get_theme_file_uri('images/user/user@2x.png');}?>
-                <div class="speaker">
+                <a class="speaker" <?php if ($speaker["link"]) echo 'href="' . $speaker["link"] . '"'; ?>>
                   <img src="<?php echo $img_url; ?>" alt="<?php echo $speaker["name"] . "profile picture"; ?>">
                   <div class="name"><?php echo $speaker["name"]; ?></div>
                   <div><?php echo $speaker["organization"]; ?></div>
-                </div>
+                </a>
               <?php }
               ?>
             </div>
