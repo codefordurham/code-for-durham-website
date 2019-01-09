@@ -50,6 +50,10 @@
           color: $mainBlue;
           text-decoration: none;
           white-space: nowrap;
+          &:hover {
+            color: $linkHoverBlue;
+            text-decoration: underline;
+          }
           @media screen and (max-width: $mobile) {
             white-space: normal;
             word-wrap: break-word;
