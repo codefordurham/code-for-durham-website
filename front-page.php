@@ -8,7 +8,7 @@
       <?php $speakers = get_field('speaker');
         if ($speakers && sizeof($speakers) > 0) { ?>
           <div class="speakers">
-            <h2>This Week's Speaker<?php if (sizeof($speakers) > 1) { echo 's'; } ?></h2>
+            <h2>Our Next Speaker<?php if (sizeof($speakers) > 1) { echo 's'; } ?></h2>
             <div class="speaker-list">
               <?php foreach ($speakers as $speaker) {
                 $img_url = $speaker["profile_picture"]["sizes"]["profile-picture"]; 
