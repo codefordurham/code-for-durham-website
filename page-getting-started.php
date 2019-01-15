@@ -27,7 +27,7 @@
                 <div class="step-content">
                   <div class="step-description"><?php echo $step["description"]?></div>
                   <?php if ($step["link"]) { ?>
-                    <a class="step-link" href="<?php echo $step["link"]; ?>"><?php echo $step["link_text"]; ?></a>
+                    <a class="step-link" href="<?php echo $step["link"]; ?>" target="_blank"><?php echo $step["link_text"]; ?></a>
                   <?php } ?>
                 </div>
               </div>

@@ -13,7 +13,7 @@
               <?php foreach ($speakers as $speaker) {
                 $img_url = $speaker["profile_picture"]["sizes"]["profile-picture"]; 
                 if (!$img_url) { $img_url = get_theme_file_uri('images/user/user@2x.png');}?>
-                <a class="speaker" <?php if ($speaker["link"]) echo 'href="' . $speaker["link"] . '"'; ?>>
+                <a class="speaker" <?php if ($speaker["link"]) echo 'href="' . $speaker["link"] . '"'; ?> target="_blank">
                   <img src="<?php echo $img_url; ?>" alt="<?php echo $speaker["name"] . "profile picture"; ?>">
                   <div class="name"><?php echo $speaker["name"]; ?></div>
                   <div><?php echo $speaker["organization"]; ?></div>
@@ -35,7 +35,7 @@
         $end_time = date("g:ia", ($next_meetup->time + $next_meetup->utc_offset + $next_meetup->duration)/1000);
         $full_address = $next_meetup->venue->address_1 . ', ' . $next_meetup->venue->city . ', ' . $next_meetup->venue->state;
       ?>
-      <a class="box-header next_meetup" href="<?php echo $next_meetup->link; ?>">
+      <a class="box-header next_meetup" href="<?php echo $next_meetup->link; ?>" target="_blank">
         <h2>NEXT MEETUP</h2>
       </a>
       <div class="box-body meetup">
@@ -47,7 +47,7 @@
 
           <div class="meetup_title"><?php echo $next_meetup->name ?></div>
           
-          <div class="meetup_location"><a href="https://www.google.com/maps/search/?api=1&query=<?php echo $full_address; ?>">
+          <div class="meetup_location"><a href="https://www.google.com/maps/search/?api=1&query=<?php echo $full_address; ?>" target="_blank">
             @ <?php echo $next_meetup->venue->name ?>
           </a></div>
 
@@ -56,7 +56,7 @@
         <div class="cta">
           <div class="meetup_rsvps">( <?php echo $next_meetup->yes_rsvp_count; ?> so far )</div>
 
-          <a href="<?php echo $next_meetup->link; ?>">JOIN</a>
+          <a href="<?php echo $next_meetup->link; ?>" target="_blank">JOIN</a>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
       ?>
 
       <div class="project">
-        <a class="project-description submit" href="https://docs.google.com/forms/d/e/1FAIpQLSd72N1G209t4k-F51mu61SZMSqXMeObKjJKJSjl_ZL0K23bsw/viewform">
+        <a class="project-description submit" href="https://docs.google.com/forms/d/e/1FAIpQLSd72N1G209t4k-F51mu61SZMSqXMeObKjJKJSjl_ZL0K23bsw/viewform" target="_blank">
           <h3>Submit your own idea</h3>
         </a>
       </div>

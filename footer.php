@@ -30,7 +30,7 @@
           }
         } 
       } ?>
-      <li class="slack-invite"><a href="http://code-for-nc-slack-invitations.herokuapp.com/">&rdsh; Request an invite!</a></li>
+      <li class="slack-invite"><a href="http://code-for-nc-slack-invitations.herokuapp.com/" target="_blank">&rdsh; Request an invite!</a></li>
     </ul>
   </div>
   <div class="sponsors contact-section">

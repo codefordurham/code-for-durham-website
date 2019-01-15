@@ -21,7 +21,7 @@
         if ($github) { ?>
           <section class="project-github">
             <div class="project-github-logo"><img src="<?php echo get_theme_file_uri('images/github_icon/github-icon@3x.png'); ?>" alt="Github logo"></div>
-            <div><a href="<?php echo $github; ?>"><?php echo str_replace('https://','',$github); ?></a></div>
+            <div><a href="<?php echo $github; ?>" target="_blank"><?php echo str_replace('https://','',$github); ?></a></div>
           </section>
         <?php }
       ?>
@@ -50,7 +50,7 @@
             <h2>Related Links</h2>
             <ul>
               <?php foreach ($links as $link) { ?>
-                <li><a href="<?php echo $link["related_link"]; ?>">
+                <li><a href="<?php echo $link["related_link"]; ?>" target="_blank">
                   <?php if ($link["link_text"]) {
                     echo $link["link_text"];
                   } else {
