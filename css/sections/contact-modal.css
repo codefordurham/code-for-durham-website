@@ -50,8 +50,14 @@
           border: 1px solid $red;
         }
       }
-      .send-button {
+      .send-button, .wpcf7-submit {
         @mixin link-button;
+      }
+      .wpcf7-not-valid-tip {
+        text-transform: none;
+        margin: -15px 0 20px 0;
+        font-size: 12px;
+        letter-spacing: normal;
       }
       .close {
         position: absolute;
@@ -65,9 +71,13 @@
           color: black;
         }
       }
+      .wpcf7-response-output {
+        display: none;
+      }
       .sent-message {
         text-align: center;
         padding-bottom: 10px;
+        display: none;
         .sent-message-header {
           @mixin section-headers;
           font-size: 20px;

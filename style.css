@@ -1083,7 +1083,7 @@ body {
           border: 1px solid #cc2e44;
         }
 
-.contact-modal .modal-content .modal-body .send-button {
+.contact-modal .modal-content .modal-body .send-button, .contact-modal .modal-content .modal-body .wpcf7-submit {
         font-family: Montserrat, sans-serif;
         font-size: 16px;
         font-weight: bold;
@@ -1096,6 +1096,13 @@ body {
         border: none;
         border-radius: 0;
         cursor: pointer;
+      }
+
+.contact-modal .modal-content .modal-body .wpcf7-not-valid-tip {
+        text-transform: none;
+        margin: -15px 0 20px 0;
+        font-size: 12px;
+        letter-spacing: normal;
       }
 
 .contact-modal .modal-content .modal-body .close {
@@ -1112,9 +1119,14 @@ body {
           color: black;
         }
 
+.contact-modal .modal-content .modal-body .wpcf7-response-output {
+        display: none;
+      }
+
 .contact-modal .modal-content .modal-body .sent-message {
         text-align: center;
         padding-bottom: 10px;
+        display: none;
       }
 
 .contact-modal .modal-content .modal-body .sent-message .sent-message-header {

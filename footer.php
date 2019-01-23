@@ -49,6 +49,7 @@
 <?php wp_footer(); ?>
 
 <script>
+  /* open and close contact modal */
   const contactModal = document.querySelector('.contact-modal');
   const contactLinks = document.querySelectorAll('.contact-link');
   const contactModalClose = document.querySelector('.contact-modal .close');
@@ -66,6 +67,24 @@
   function closeContactModal() {
     contactModal.classList.remove('open');
   }
+
+  /* display contact form/success message/error message */
+  const contactForm = document.querySelector('.contact-form');
+  const successMessage = document.querySelector('.sent-message.success');
+  const failureMessage = document.querySelector('.sent-message.failure');
+  const wpcf7Elm = document.querySelector( '.wpcf7' );
+  
+  wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+    contactForm.style.display = "none";
+    successMessage.style.display = "block";
+    failureMessage.style.display = "none";
+  }, false );
+  wpcf7Elm.addEventListener( 'wpcf7mailfailed', function( event ) {
+    contactForm.style.display = "none";
+    successMessage.style.display = "none";
+    failureMessage.style.display = "block";
+  }, false );
+
 </script>
 </body>
 </html>
