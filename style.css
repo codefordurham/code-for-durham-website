@@ -769,6 +769,10 @@ body {
           }
             }
 
+.boxes .box .box-body.meetup .cta a:hover {
+            background-color: #21536c;
+          }
+
 @media screen and (max-width: 768px) {
 
 .boxes .box .box-body.meetup .cta {
@@ -808,6 +812,10 @@ body {
 .boxes .box .box-body.faq .cta a {
             background-color: #d14256;
           }
+
+.boxes .box .box-body.faq .cta a:hover {
+              background-color: #900014;
+            }
 
 @media screen and (max-width: 768px) {
 
