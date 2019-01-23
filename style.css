@@ -1262,6 +1262,20 @@ body {
         }
           }
 
+.contact .follow ul li .slack-invite {
+          display: block;
+          margin-top: 0.2em;
+          font-size: 16px;
+          font-style: italic;
+        }
+
+@media screen and (max-width: 768px) {
+
+.contact .follow ul li .slack-invite {
+            font-size: 13px
+        }
+          }
+
 .contact .follow ul li:last-of-type {
           padding-bottom: 0;
         }
@@ -1275,22 +1289,9 @@ body {
       }
         }
 
-.contact .follow ul li.slack-invite a {
-            margin-left: 50px;
-            font-size: 16px;
-            font-style: italic;
-          }
-
-@media screen and (max-width: 768px) {
-
-.contact .follow ul li.slack-invite a {
-              font-size: 13px
-          }
-            }
-
 .contact .sponsors {
     padding-left: 50px;
-    padding-right: 85px;
+    padding-bottom: 20px;
   }
 
 @media screen and (max-width: 768px) {
@@ -1303,6 +1304,7 @@ body {
 
 .contact .sponsors .sponsor-logos {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
     }

@@ -1,15 +1,16 @@
 <section class="contact">
-  <div class="follow contact-section">
-    <h2>JOIN IN</h2>
-    <ul>
-      <?php 
-        $home = new WP_Query(array(
-          'pagename' => 'home'
-        ));
-        if ( $home->have_posts() ) {
-          while ( $home->have_posts() ) {
-          $home->the_post();
-          $contact_links = get_field('contact_links');
+
+  <?php  $home = new WP_Query(array(
+      'pagename' => 'home'
+    ));
+    if ( $home->have_posts() ) {
+      while ( $home->have_posts() ) {
+      $home->the_post(); ?>
+
+      <div class="follow contact-section">
+        <h2>JOIN IN</h2>
+        <ul>
+          <?php $contact_links = get_field('contact_links');
           if ($contact_links && sizeof($contact_links) > 0) {
             foreach ($contact_links as $link) {
               $site_and_image = get_site_and_image($link);
@@ -18,27 +19,39 @@
                 <?php if ($site_and_image["image"]) { ?>
                   <img src="<?php echo get_theme_file_uri('/images/' . $site_and_image["image"]); ?>" alt="<?php echo $site_and_image["site"]; ?> logo" style="width:30px;height:30px">
                 <?php } ?>
-                <a href="<?php echo $link["url"]; ?>" target="_blank">
-                  <?php if ($link["text"]) {
-                    echo $link["text"]; 
-                  } else {
-                    echo $link["url"];
-                  } ?>
-                </a>
+                <div>
+                  <a href="<?php echo $link["url"]; ?>" target="_blank">
+                    <?php if ($link["text"]) {
+                      echo $link["text"]; 
+                    } else {
+                      echo $link["url"];
+                    } ?>
+                  </a>
+                  <?php if ($site_and_image["site"] == 'open-nc.slack') { ?>
+                    <a class="slack-invite" href="http://code-for-nc-slack-invitations.herokuapp.com/" target="_blank">&rdsh; Request an invite!</a>
+                  <?php } ?>
+                </div>
               </li>
             <?php }
-          }
-        } 
-      } ?>
-      <li class="slack-invite"><a href="http://code-for-nc-slack-invitations.herokuapp.com/" target="_blank">&rdsh; Request an invite!</a></li>
-    </ul>
-  </div>
-  <div class="sponsors contact-section">
-    <h2>CFD SPONSORS</h2>
-    <div class="sponsor-logos">
-      <img src="<?php echo get_theme_file_uri('/images/caktus-logo.png'); ?>" alt="">
-    </div>
-  </div>	
+          } ?>
+        </ul>
+      </div>
+      <div class="sponsors contact-section">
+        <h2>CFD SPONSORS</h2>
+        <div class="sponsor-logos">
+          <?php $sponsors = get_field('sponsors');
+            if ($sponsors && sizeof($sponsors) > 0) {
+              foreach ($sponsors as $sponsor) { ?>
+                <a href="<?php echo $sponsor['link']; ?>" target="_blank">
+                  <img src="<?php echo $sponsor['logo']; ?>" alt="">
+                </a>
+              <?php }
+            }
+          ?>
+        </div>
+      </div>
+    <?php }
+  } ?>
 </section>
 
 <footer class="footer">
